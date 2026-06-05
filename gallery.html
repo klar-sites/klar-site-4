@@ -1,174 +1,1655 @@
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Velocity — Ship Products Faster</title>
-  <meta name="description" content="Velocity is the all-in-one platform that helps modern teams design, build, and scale software at the speed of thought. Start your free trial today.">
-  <link rel="stylesheet" href="/style.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velocity Gallery — Product Stories in Motion</title>
+  <meta name="description" content="Explore the Velocity gallery: dashboards, workflows, customer moments, integrations, and product screens from teams shipping faster." />
+  <style>
+    :root {
+      --velgal-9x4-color-white: #ffffff;
+      --velgal-9x4-color-black: #09090b;
+      --velgal-9x4-color-gray-50: #fafafa;
+      --velgal-9x4-color-gray-100: #f4f4f5;
+      --velgal-9x4-color-gray-200: #e4e4e7;
+      --velgal-9x4-color-gray-300: #d4d4d8;
+      --velgal-9x4-color-gray-400: #a1a1aa;
+      --velgal-9x4-color-gray-500: #71717a;
+      --velgal-9x4-color-gray-600: #52525b;
+      --velgal-9x4-color-gray-700: #3f3f46;
+      --velgal-9x4-color-gray-800: #27272a;
+      --velgal-9x4-color-gray-900: #18181b;
+      --velgal-9x4-color-gray-950: #0f0f12;
+      --velgal-9x4-color-indigo-50: #eef2ff;
+      --velgal-9x4-color-indigo-100: #e0e7ff;
+      --velgal-9x4-color-indigo-200: #c7d2fe;
+      --velgal-9x4-color-indigo-400: #818cf8;
+      --velgal-9x4-color-indigo-500: #6366f1;
+      --velgal-9x4-color-indigo-600: #4f46e5;
+      --velgal-9x4-color-indigo-700: #4338ca;
+      --velgal-9x4-color-indigo-900: #312e81;
+      --velgal-9x4-color-violet-400: #a78bfa;
+      --velgal-9x4-color-violet-500: #8b5cf6;
+      --velgal-9x4-color-violet-600: #7c3aed;
+      --velgal-9x4-color-emerald-400: #34d399;
+      --velgal-9x4-bg: var(--velgal-9x4-color-white);
+      --velgal-9x4-fg: var(--velgal-9x4-color-gray-900);
+      --velgal-9x4-muted-bg: var(--velgal-9x4-color-gray-50);
+      --velgal-9x4-card-bg: var(--velgal-9x4-color-white);
+      --velgal-9x4-card-muted-bg: var(--velgal-9x4-color-gray-50);
+      --velgal-9x4-border: var(--velgal-9x4-color-gray-200);
+      --velgal-9x4-muted-fg: var(--velgal-9x4-color-gray-500);
+      --velgal-9x4-primary: var(--velgal-9x4-color-indigo-600);
+      --velgal-9x4-primary-hover: var(--velgal-9x4-color-indigo-700);
+      --velgal-9x4-accent: var(--velgal-9x4-color-violet-500);
+      --velgal-9x4-success: var(--velgal-9x4-color-emerald-400);
+      --velgal-9x4-ring: var(--velgal-9x4-color-indigo-400);
+      --velgal-9x4-shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --velgal-9x4-shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+      --velgal-9x4-shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+      --velgal-9x4-shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.08), 0 8px 10px -6px rgba(0,0,0,0.04);
+      --velgal-9x4-font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      --velgal-9x4-radius-sm: 6px;
+      --velgal-9x4-radius-md: 8px;
+      --velgal-9x4-radius-lg: 12px;
+      --velgal-9x4-radius-xl: 16px;
+      --velgal-9x4-radius-2xl: 24px;
+      --velgal-9x4-radius-full: 9999px;
+      --velgal-9x4-max-width: 1200px;
+      --velgal-9x4-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --velgal-9x4-transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      --velgal-9x4-transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html[data-velgal-9x4-theme="dark"] {
+      --velgal-9x4-bg: var(--velgal-9x4-color-gray-950);
+      --velgal-9x4-fg: var(--velgal-9x4-color-gray-100);
+      --velgal-9x4-muted-bg: var(--velgal-9x4-color-gray-900);
+      --velgal-9x4-card-bg: var(--velgal-9x4-color-gray-900);
+      --velgal-9x4-card-muted-bg: var(--velgal-9x4-color-gray-800);
+      --velgal-9x4-border: var(--velgal-9x4-color-gray-700);
+      --velgal-9x4-muted-fg: var(--velgal-9x4-color-gray-400);
+      --velgal-9x4-primary: var(--velgal-9x4-color-indigo-500);
+      --velgal-9x4-primary-hover: var(--velgal-9x4-color-indigo-400);
+      --velgal-9x4-accent: var(--velgal-9x4-color-violet-400);
+      --velgal-9x4-shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+      --velgal-9x4-shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -2px rgba(0,0,0,0.3);
+      --velgal-9x4-shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -4px rgba(0,0,0,0.3);
+      --velgal-9x4-shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.55), 0 8px 10px -6px rgba(0,0,0,0.35);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--velgal-9x4-font-sans);
+      color: var(--velgal-9x4-fg);
+      background:
+        radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--velgal-9x4-primary) 18%, transparent), transparent 34rem),
+        radial-gradient(circle at 85% 12%, color-mix(in srgb, var(--velgal-9x4-accent) 16%, transparent), transparent 32rem),
+        var(--velgal-9x4-bg);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    img, svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--velgal-9x4-ring);
+      outline-offset: 3px;
+    }
+
+    ::selection {
+      background: var(--velgal-9x4-primary);
+      color: var(--velgal-9x4-color-white);
+    }
+
+    .velgal-9x4-shell {
+      width: min(100%, var(--velgal-9x4-max-width));
+      margin-inline: auto;
+      padding-inline: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .velgal-9x4-shell {
+        padding-inline: 1.5rem;
+      }
+    }
+
+    .velgal-9x4-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      border-bottom: 1px solid var(--velgal-9x4-border);
+      background: color-mix(in srgb, var(--velgal-9x4-bg) 86%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .velgal-9x4-header__inner {
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .velgal-9x4-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      font-size: 1.25rem;
+      color: var(--velgal-9x4-fg);
+    }
+
+    .velgal-9x4-brand__mark {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--velgal-9x4-radius-md);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--velgal-9x4-primary), var(--velgal-9x4-accent));
+      color: var(--velgal-9x4-color-white);
+      box-shadow: 0 10px 22px color-mix(in srgb, var(--velgal-9x4-primary) 28%, transparent);
+      font-size: 0.875rem;
+      flex: 0 0 auto;
+    }
+
+    .velgal-9x4-desktopnav {
+      display: none;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    @media (min-width: 850px) {
+      .velgal-9x4-desktopnav {
+        display: flex;
+      }
+    }
+
+    .velgal-9x4-desktopnav__link {
+      color: var(--velgal-9x4-muted-fg);
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: color var(--velgal-9x4-transition-fast);
+    }
+
+    .velgal-9x4-desktopnav__link:hover {
+      color: var(--velgal-9x4-fg);
+    }
+
+    .velgal-9x4-headeractions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .velgal-9x4-themebutton,
+    .velgal-9x4-menubutton,
+    .velgal-9x4-lightbox__control {
+      border: 1px solid var(--velgal-9x4-border);
+      background: var(--velgal-9x4-card-bg);
+      color: var(--velgal-9x4-fg);
+      border-radius: var(--velgal-9x4-radius-md);
+      cursor: pointer;
+      transition: background-color var(--velgal-9x4-transition-fast), transform var(--velgal-9x4-transition-fast), border-color var(--velgal-9x4-transition-fast);
+    }
+
+    .velgal-9x4-themebutton,
+    .velgal-9x4-menubutton {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .velgal-9x4-themebutton:hover,
+    .velgal-9x4-menubutton:hover,
+    .velgal-9x4-lightbox__control:hover {
+      background: var(--velgal-9x4-muted-bg);
+      transform: translateY(-1px);
+    }
+
+    .velgal-9x4-themebutton__moon {
+      display: none;
+    }
+
+    html[data-velgal-9x4-theme="dark"] .velgal-9x4-themebutton__sun {
+      display: none;
+    }
+
+    html[data-velgal-9x4-theme="dark"] .velgal-9x4-themebutton__moon {
+      display: block;
+    }
+
+    .velgal-9x4-menubutton {
+      display: inline-flex;
+    }
+
+    @media (min-width: 850px) {
+      .velgal-9x4-menubutton {
+        display: none;
+      }
+    }
+
+    .velgal-9x4-mobilepanel {
+      display: none;
+      border-top: 1px solid var(--velgal-9x4-border);
+      padding: 1rem;
+      background: var(--velgal-9x4-bg);
+    }
+
+    .velgal-9x4-mobilepanel[data-velgal-9x4-menu-state="open"] {
+      display: block;
+    }
+
+    @media (min-width: 850px) {
+      .velgal-9x4-mobilepanel {
+        display: none !important;
+      }
+    }
+
+    .velgal-9x4-mobilepanel__link {
+      display: block;
+      padding: 0.85rem 0;
+      color: var(--velgal-9x4-muted-fg);
+      font-weight: 650;
+      border-bottom: 1px solid var(--velgal-9x4-border);
+    }
+
+    .velgal-9x4-pillbutton {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 40px;
+      padding: 0.625rem 1rem;
+      border-radius: var(--velgal-9x4-radius-md);
+      border: 1px solid transparent;
+      background: var(--velgal-9x4-primary);
+      color: var(--velgal-9x4-color-white);
+      font-size: 0.875rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform var(--velgal-9x4-transition-fast), background-color var(--velgal-9x4-transition-fast), border-color var(--velgal-9x4-transition-fast), box-shadow var(--velgal-9x4-transition-fast);
+      box-shadow: 0 10px 22px color-mix(in srgb, var(--velgal-9x4-primary) 22%, transparent);
+    }
+
+    .velgal-9x4-pillbutton:hover {
+      background: var(--velgal-9x4-primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .velgal-9x4-pillbutton--subtle {
+      background: transparent;
+      color: var(--velgal-9x4-fg);
+      border-color: var(--velgal-9x4-border);
+      box-shadow: none;
+    }
+
+    .velgal-9x4-pillbutton--subtle:hover {
+      background: var(--velgal-9x4-muted-bg);
+      color: var(--velgal-9x4-fg);
+    }
+
+    .velgal-9x4-hero {
+      padding: 5rem 0 3rem;
+      overflow: hidden;
+    }
+
+    @media (min-width: 900px) {
+      .velgal-9x4-hero {
+        padding: 6.5rem 0 4.5rem;
+      }
+    }
+
+    .velgal-9x4-hero__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      .velgal-9x4-hero__grid {
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 4rem;
+      }
+    }
+
+    .velgal-9x4-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: var(--velgal-9x4-radius-full);
+      background: color-mix(in srgb, var(--velgal-9x4-primary) 11%, transparent);
+      color: var(--velgal-9x4-primary);
+      border: 1px solid color-mix(in srgb, var(--velgal-9x4-primary) 16%, transparent);
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .velgal-9x4-hero__headline {
+      margin-top: 1.25rem;
+      font-size: clamp(2.55rem, 7vw, 4.75rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      color: var(--velgal-9x4-fg);
+      max-width: 760px;
+    }
+
+    .velgal-9x4-hero__gradienttext {
+      background: linear-gradient(135deg, var(--velgal-9x4-primary), var(--velgal-9x4-accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .velgal-9x4-hero__lead {
+      margin-top: 1.25rem;
+      max-width: 650px;
+      color: var(--velgal-9x4-muted-fg);
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+      line-height: 1.7;
+    }
+
+    .velgal-9x4-hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+
+    .velgal-9x4-hero__metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+      margin-top: 2rem;
+      max-width: 520px;
+    }
+
+    .velgal-9x4-hero__metric {
+      padding: 1rem;
+      border: 1px solid var(--velgal-9x4-border);
+      border-radius: var(--velgal-9x4-radius-lg);
+      background: color-mix(in srgb, var(--velgal-9x4-card-bg) 82%, transparent);
+      box-shadow: var(--velgal-9x4-shadow-sm);
+    }
+
+    .velgal-9x4-hero__metricvalue {
+      display: block;
+      color: var(--velgal-9x4-fg);
+      font-weight: 850;
+      letter-spacing: -0.03em;
+      font-size: 1.35rem;
+    }
+
+    .velgal-9x4-hero__metriclabel {
+      display: block;
+      margin-top: 0.15rem;
+      color: var(--velgal-9x4-muted-fg);
+      font-size: 0.75rem;
+      font-weight: 650;
+    }
+
+    .velgal-9x4-previewstack {
+      position: relative;
+      min-height: 460px;
+    }
+
+    .velgal-9x4-previewstack::before {
+      content: "";
+      position: absolute;
+      inset: 9% 6% 8% 10%;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--velgal-9x4-primary) 28%, transparent), color-mix(in srgb, var(--velgal-9x4-accent) 22%, transparent));
+      filter: blur(36px);
+      opacity: 0.82;
+      border-radius: 40px;
+    }
+
+    .velgal-9x4-previewstack__tile {
+      position: absolute;
+      overflow: hidden;
+      border-radius: var(--velgal-9x4-radius-2xl);
+      border: 1px solid color-mix(in srgb, var(--velgal-9x4-border) 80%, transparent);
+      background: var(--velgal-9x4-card-bg);
+      box-shadow: var(--velgal-9x4-shadow-xl);
+      isolation: isolate;
+    }
+
+    .velgal-9x4-previewstack__tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 700ms ease;
+    }
+
+    .velgal-9x4-previewstack__tile:hover img {
+      transform: scale(1.05);
+    }
+
+    .velgal-9x4-previewstack__tile--large {
+      width: 68%;
+      aspect-ratio: 4 / 5;
+      right: 0;
+      top: 0;
+    }
+
+    .velgal-9x4-previewstack__tile--wide {
+      width: 58%;
+      aspect-ratio: 16 / 10;
+      left: 0;
+      bottom: 16%;
+    }
+
+    .velgal-9x4-previewstack__tile--small {
+      width: 36%;
+      aspect-ratio: 1 / 1;
+      left: 16%;
+      top: 3%;
+      transform: rotate(-4deg);
+    }
+
+    .velgal-9x4-previewstack__caption {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      border-radius: var(--velgal-9x4-radius-lg);
+      color: var(--velgal-9x4-color-white);
+      background: rgba(9, 9, 11, 0.62);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .velgal-9x4-sectionhead {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .velgal-9x4-sectionhead__title {
+      color: var(--velgal-9x4-fg);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
+
+    .velgal-9x4-sectionhead__text {
+      margin-top: 0.9rem;
+      color: var(--velgal-9x4-muted-fg);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .velgal-9x4-galleryarea {
+      padding: 4.5rem 0;
+      background: linear-gradient(180deg, transparent, color-mix(in srgb, var(--velgal-9x4-muted-bg) 70%, transparent) 18%, color-mix(in srgb, var(--velgal-9x4-muted-bg) 70%, transparent) 84%, transparent);
+    }
+
+    .velgal-9x4-filterbar {
+      position: sticky;
+      top: 65px;
+      z-index: 30;
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding: 0.75rem;
+      margin-bottom: 1.75rem;
+      border: 1px solid var(--velgal-9x4-border);
+      border-radius: var(--velgal-9x4-radius-xl);
+      background: color-mix(in srgb, var(--velgal-9x4-bg) 86%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      box-shadow: var(--velgal-9x4-shadow-sm);
+      scrollbar-width: none;
+    }
+
+    .velgal-9x4-filterbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .velgal-9x4-filterbar__button {
+      flex: 0 0 auto;
+      border: 1px solid transparent;
+      border-radius: var(--velgal-9x4-radius-full);
+      background: transparent;
+      color: var(--velgal-9x4-muted-fg);
+      cursor: pointer;
+      padding: 0.55rem 0.9rem;
+      font-size: 0.875rem;
+      font-weight: 800;
+      transition: background-color var(--velgal-9x4-transition-fast), color var(--velgal-9x4-transition-fast), border-color var(--velgal-9x4-transition-fast);
+    }
+
+    .velgal-9x4-filterbar__button:hover {
+      color: var(--velgal-9x4-fg);
+      background: var(--velgal-9x4-muted-bg);
+    }
+
+    .velgal-9x4-filterbar__button[aria-pressed="true"] {
+      color: var(--velgal-9x4-color-white);
+      background: linear-gradient(135deg, var(--velgal-9x4-primary), var(--velgal-9x4-accent));
+      box-shadow: 0 10px 20px color-mix(in srgb, var(--velgal-9x4-primary) 20%, transparent);
+    }
+
+    .velgal-9x4-gallerygrid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .velgal-9x4-gallerygrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 980px) {
+      .velgal-9x4-gallerygrid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .velgal-9x4-galleryitem {
+      position: relative;
+      overflow: hidden;
+      min-height: 280px;
+      border-radius: var(--velgal-9x4-radius-xl);
+      border: 1px solid var(--velgal-9x4-border);
+      background: var(--velgal-9x4-card-bg);
+      box-shadow: var(--velgal-9x4-shadow-md);
+      cursor: pointer;
+      transition: opacity var(--velgal-9x4-transition-base), transform var(--velgal-9x4-transition-base), box-shadow var(--velgal-9x4-transition-base), border-color var(--velgal-9x4-transition-base);
+    }
+
+    .velgal-9x4-galleryitem:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--velgal-9x4-shadow-xl);
+      border-color: color-mix(in srgb, var(--velgal-9x4-primary) 45%, var(--velgal-9x4-border));
+    }
+
+    .velgal-9x4-galleryitem[hidden] {
+      display: none;
+    }
+
+    .velgal-9x4-galleryitem--tall {
+      min-height: 430px;
+    }
+
+    @media (min-width: 980px) {
+      .velgal-9x4-galleryitem--wide {
+        grid-column: span 2;
+      }
+    }
+
+    .velgal-9x4-galleryitem__image {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      transition: transform 700ms ease;
+    }
+
+    .velgal-9x4-galleryitem:hover .velgal-9x4-galleryitem__image {
+      transform: scale(1.055);
+    }
+
+    .velgal-9x4-galleryitem__shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(9,9,11,0.05), rgba(9,9,11,0.08) 38%, rgba(9,9,11,0.78));
+      pointer-events: none;
+    }
+
+    .velgal-9x4-galleryitem__details {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1rem;
+      color: var(--velgal-9x4-color-white);
+    }
+
+    .velgal-9x4-galleryitem__tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.28rem 0.55rem;
+      border-radius: var(--velgal-9x4-radius-full);
+      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: rgba(255,255,255,0.92);
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+
+    .velgal-9x4-galleryitem__title {
+      color: var(--velgal-9x4-color-white);
+      font-size: 1.25rem;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+    }
+
+    .velgal-9x4-galleryitem__meta {
+      margin-top: 0.35rem;
+      color: rgba(255,255,255,0.76);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .velgal-9x4-galleryitem__openicon {
+      flex: 0 0 auto;
+      width: 42px;
+      height: 42px;
+      border-radius: var(--velgal-9x4-radius-full);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--velgal-9x4-color-white);
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: background-color var(--velgal-9x4-transition-fast), transform var(--velgal-9x4-transition-fast);
+    }
+
+    .velgal-9x4-galleryitem:hover .velgal-9x4-galleryitem__openicon {
+      background: rgba(255,255,255,0.26);
+      transform: rotate(4deg) scale(1.04);
+    }
+
+    .velgal-9x4-storyband {
+      padding: 4.5rem 0;
+    }
+
+    .velgal-9x4-storyband__panel {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      overflow: hidden;
+      border: 1px solid var(--velgal-9x4-border);
+      border-radius: var(--velgal-9x4-radius-2xl);
+      background: var(--velgal-9x4-card-bg);
+      box-shadow: var(--velgal-9x4-shadow-lg);
+    }
+
+    @media (min-width: 900px) {
+      .velgal-9x4-storyband__panel {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 0;
+      }
+    }
+
+    .velgal-9x4-storyband__copy {
+      padding: clamp(1.5rem, 5vw, 3rem);
+    }
+
+    .velgal-9x4-storyband__title {
+      font-size: clamp(1.85rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+      color: var(--velgal-9x4-fg);
+      margin-top: 0.9rem;
+    }
+
+    .velgal-9x4-storyband__text {
+      margin-top: 1rem;
+      color: var(--velgal-9x4-muted-fg);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .velgal-9x4-storyband__list {
+      list-style: none;
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .velgal-9x4-storyband__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      color: var(--velgal-9x4-fg);
+      font-size: 0.95rem;
+      font-weight: 650;
+    }
+
+    .velgal-9x4-storyband__check {
+      margin-top: 0.1rem;
+      color: var(--velgal-9x4-success);
+      flex: 0 0 auto;
+    }
+
+    .velgal-9x4-storyband__media {
+      min-height: 360px;
+      position: relative;
+      overflow: hidden;
+      background: var(--velgal-9x4-card-muted-bg);
+    }
+
+    .velgal-9x4-storyband__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .velgal-9x4-storyband__float {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      display: grid;
+      gap: 0.5rem;
+      max-width: 420px;
+      padding: 1rem;
+      border-radius: var(--velgal-9x4-radius-xl);
+      background: rgba(9, 9, 11, 0.68);
+      color: var(--velgal-9x4-color-white);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .velgal-9x4-storyband__floatstrong {
+      font-weight: 850;
+      letter-spacing: -0.025em;
+      font-size: 1.1rem;
+    }
+
+    .velgal-9x4-storyband__floatsmall {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+
+    .velgal-9x4-cta {
+      padding: 4.5rem 0 5rem;
+    }
+
+    .velgal-9x4-cta__panel {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: clamp(2.5rem, 6vw, 4.5rem) 1.25rem;
+      border-radius: var(--velgal-9x4-radius-2xl);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.22), transparent 18rem),
+        linear-gradient(135deg, var(--velgal-9x4-primary), var(--velgal-9x4-accent));
+      color: var(--velgal-9x4-color-white);
+      box-shadow: var(--velgal-9x4-shadow-xl);
+    }
+
+    .velgal-9x4-cta__title {
+      color: var(--velgal-9x4-color-white);
+      font-size: clamp(2rem, 5vw, 3.3rem);
+      line-height: 1.06;
+      letter-spacing: -0.05em;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .velgal-9x4-cta__text {
+      max-width: 640px;
+      margin: 1rem auto 0;
+      color: rgba(255,255,255,0.84);
+      font-size: 1.08rem;
+      line-height: 1.7;
+    }
+
+    .velgal-9x4-cta__actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.6rem;
+    }
+
+    .velgal-9x4-cta__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 48px;
+      padding: 0.8rem 1.25rem;
+      border-radius: var(--velgal-9x4-radius-lg);
+      border: 1px solid rgba(255,255,255,0.28);
+      background: var(--velgal-9x4-color-white);
+      color: var(--velgal-9x4-primary);
+      font-weight: 850;
+      transition: transform var(--velgal-9x4-transition-fast), background-color var(--velgal-9x4-transition-fast);
+    }
+
+    .velgal-9x4-cta__button:hover {
+      transform: translateY(-1px);
+      background: var(--velgal-9x4-color-gray-100);
+    }
+
+    .velgal-9x4-cta__button--ghost {
+      background: rgba(255,255,255,0.12);
+      color: var(--velgal-9x4-color-white);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .velgal-9x4-cta__button--ghost:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .velgal-9x4-footer {
+      border-top: 1px solid var(--velgal-9x4-border);
+      padding: 2rem 0;
+      background: color-mix(in srgb, var(--velgal-9x4-bg) 92%, transparent);
+    }
+
+    .velgal-9x4-footer__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: flex-start;
+      justify-content: space-between;
+      color: var(--velgal-9x4-muted-fg);
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 760px) {
+      .velgal-9x4-footer__inner {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .velgal-9x4-footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .velgal-9x4-footer__link {
+      color: var(--velgal-9x4-muted-fg);
+      transition: color var(--velgal-9x4-transition-fast);
+    }
+
+    .velgal-9x4-footer__link:hover {
+      color: var(--velgal-9x4-fg);
+    }
+
+    .velgal-9x4-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(9, 9, 11, 0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .velgal-9x4-lightbox[aria-hidden="false"] {
+      display: flex;
+    }
+
+    .velgal-9x4-lightbox__dialog {
+      width: min(100%, 1080px);
+      max-height: calc(100vh - 2rem);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--velgal-9x4-radius-2xl);
+      background: var(--velgal-9x4-card-bg);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+    }
+
+    .velgal-9x4-lightbox__media {
+      position: relative;
+      background: var(--velgal-9x4-color-black);
+    }
+
+    .velgal-9x4-lightbox__image {
+      width: 100%;
+      max-height: 68vh;
+      object-fit: contain;
+      background: var(--velgal-9x4-color-black);
+    }
+
+    .velgal-9x4-lightbox__control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.12);
+      color: var(--velgal-9x4-color-white);
+      border-color: rgba(255,255,255,0.2);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .velgal-9x4-lightbox__control:hover {
+      transform: translateY(-50%) scale(1.04);
+      background: rgba(255,255,255,0.2);
+    }
+
+    .velgal-9x4-lightbox__control--previous {
+      left: 1rem;
+    }
+
+    .velgal-9x4-lightbox__control--next {
+      right: 1rem;
+    }
+
+    .velgal-9x4-lightbox__close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--velgal-9x4-radius-full);
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.12);
+      color: var(--velgal-9x4-color-white);
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: background-color var(--velgal-9x4-transition-fast), transform var(--velgal-9x4-transition-fast);
+    }
+
+    .velgal-9x4-lightbox__close:hover {
+      background: rgba(255,255,255,0.22);
+      transform: scale(1.04);
+    }
+
+    .velgal-9x4-lightbox__body {
+      padding: 1.25rem;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    @media (min-width: 760px) {
+      .velgal-9x4-lightbox__body {
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        padding: 1.5rem;
+      }
+    }
+
+    .velgal-9x4-lightbox__tag {
+      color: var(--velgal-9x4-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.74rem;
+      font-weight: 850;
+    }
+
+    .velgal-9x4-lightbox__title {
+      color: var(--velgal-9x4-fg);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -0.035em;
+    }
+
+    .velgal-9x4-lightbox__text {
+      color: var(--velgal-9x4-muted-fg);
+      line-height: 1.65;
+      max-width: 720px;
+      margin-top: 0.25rem;
+    }
+
+    .velgal-9x4-lightbox__count {
+      color: var(--velgal-9x4-muted-fg);
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .velgal-9x4-reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 650ms ease, transform 650ms ease;
+    }
+
+    .velgal-9x4-reveal[data-velgal-9x4-reveal-state="visible"] {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .velgal-9x4-sr {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .velgal-9x4-reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
 </head>
-<body><header class="site-header">
-    <div class="container site-header__inner">
-      <a href="index.html" class="brand">
-        <span class="brand__icon">V</span>
+<body>
+  <header class="velgal-9x4-header">
+    <div class="velgal-9x4-shell velgal-9x4-header__inner">
+      <a class="velgal-9x4-brand" href="#velgal-9x4-top" aria-label="Velocity gallery home">
+        <span class="velgal-9x4-brand__mark">V</span>
         Velocity
       </a>
 
-      <nav class="nav" aria-label="Primary navigation">
-        <a href="#features" class="nav-link">Features</a>
-        <a href="#benefits" class="nav-link">Benefits</a>
-        <a href="#testimonials" class="nav-link">Testimonials</a>
-        <a href="#pricing" class="nav-link">Pricing</a>
-        <a href="#faq" class="nav-link">FAQ</a>
+      <nav class="velgal-9x4-desktopnav" aria-label="Gallery navigation">
+        <a class="velgal-9x4-desktopnav__link" href="#velgal-9x4-gallery">Gallery</a>
+        <a class="velgal-9x4-desktopnav__link" href="#velgal-9x4-stories">Stories</a>
+        <a class="velgal-9x4-desktopnav__link" href="#velgal-9x4-cta">Submit work</a>
       </nav>
 
-      <div class="header-actions">
-        <button class="theme-toggle" aria-label="Toggle theme">
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      <div class="velgal-9x4-headeractions">
+        <button class="velgal-9x4-themebutton" type="button" aria-label="Toggle theme" id="velgal-9x4-theme-toggle">
+          <svg class="velgal-9x4-themebutton__sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg class="velgal-9x4-themebutton__moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="#pricing" class="btn btn-primary btn-sm md:hidden">Get Started</a>
-        <a href="#pricing" class="btn btn-primary hidden md:flex">Get Started Free</a>
-        <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+        <a class="velgal-9x4-pillbutton" href="#velgal-9x4-gallery">Explore</a>
+        <button class="velgal-9x4-menubutton" type="button" aria-label="Open navigation menu" aria-expanded="false" id="velgal-9x4-menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
         </button>
       </div>
     </div>
-  </header><main></main><footer class="site-footer">
-    <div class="container">
-      <div class="site-footer__grid">
-        <div class="site-footer__brand">
-          <a href="index.html" class="brand">
-            <span class="brand__icon">V</span>
-            Velocity
-          </a>
-          <p class="site-footer__description">The all-in-one platform for modern product teams. Ship faster, measure smarter, grow together.</p>
+
+    <div class="velgal-9x4-mobilepanel" id="velgal-9x4-mobile-panel" data-velgal-9x4-menu-state="closed">
+      <a class="velgal-9x4-mobilepanel__link" href="#velgal-9x4-gallery">Gallery</a>
+      <a class="velgal-9x4-mobilepanel__link" href="#velgal-9x4-stories">Stories</a>
+      <a class="velgal-9x4-mobilepanel__link" href="#velgal-9x4-cta">Submit work</a>
+    </div>
+  </header>
+
+  <main id="velgal-9x4-top">
+    <section class="velgal-9x4-hero">
+      <div class="velgal-9x4-shell velgal-9x4-hero__grid">
+        <div class="velgal-9x4-reveal">
+          <span class="velgal-9x4-eyebrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 2.4 4.86 5.36.78-3.88 3.78.92 5.34L12 15.24l-4.8 2.52.92-5.34-3.88-3.78 5.36-.78L12 3z"/></svg>
+            Product gallery
+          </span>
+          <h1 class="velgal-9x4-hero__headline">A visual archive of teams building at <span class="velgal-9x4-hero__gradienttext">Velocity</span>.</h1>
+          <p class="velgal-9x4-hero__lead">Browse polished product screens, customer moments, workflow snapshots, and integration showcases from the teams turning ideas into shipped software.</p>
+          <div class="velgal-9x4-hero__actions">
+            <a class="velgal-9x4-pillbutton" href="#velgal-9x4-gallery">
+              View gallery
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a class="velgal-9x4-pillbutton velgal-9x4-pillbutton--subtle" href="#velgal-9x4-stories">Read featured story</a>
+          </div>
+
+          <div class="velgal-9x4-hero__metrics" aria-label="Gallery statistics">
+            <div class="velgal-9x4-hero__metric">
+              <span class="velgal-9x4-hero__metricvalue">84</span>
+              <span class="velgal-9x4-hero__metriclabel">Featured shots</span>
+            </div>
+            <div class="velgal-9x4-hero__metric">
+              <span class="velgal-9x4-hero__metricvalue">31</span>
+              <span class="velgal-9x4-hero__metriclabel">Teams shown</span>
+            </div>
+            <div class="velgal-9x4-hero__metric">
+              <span class="velgal-9x4-hero__metricvalue">4.9★</span>
+              <span class="velgal-9x4-hero__metriclabel">Avg. rating</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <h4 class="site-footer__column-title">Product</h4>
-          <nav class="site-footer__links">
-            <a href="#features" class="footer-link">Features</a>
-            <a href="#pricing" class="footer-link">Pricing</a>
-            <a href="#" class="footer-link">Changelog</a>
-            <a href="#" class="footer-link">Roadmap</a>
-            <a href="#" class="footer-link">API Docs</a>
-          </nav>
-        </div>
-        <div>
-          <h4 class="site-footer__column-title">Company</h4>
-          <nav class="site-footer__links">
-            <a href="#" class="footer-link">About</a>
-            <a href="#" class="footer-link">Blog</a>
-            <a href="#" class="footer-link">Careers</a>
-            <a href="#" class="footer-link">Contact</a>
-            <a href="#" class="footer-link">Press Kit</a>
-          </nav>
-        </div>
-        <div>
-          <h4 class="site-footer__column-title">Legal</h4>
-          <nav class="site-footer__links">
-            <a href="#" class="footer-link">Privacy Policy</a>
-            <a href="#" class="footer-link">Terms of Service</a>
-            <a href="#" class="footer-link">Cookie Policy</a>
-            <a href="#" class="footer-link">Security</a>
-          </nav>
+
+        <div class="velgal-9x4-previewstack velgal-9x4-reveal" aria-label="Featured gallery previews">
+          <div class="velgal-9x4-previewstack__tile velgal-9x4-previewstack__tile--large">
+            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=82" alt="Team reviewing product designs together" />
+            <div class="velgal-9x4-previewstack__caption">
+              <span>Design sprint review</span>
+              <span>01</span>
+            </div>
+          </div>
+          <div class="velgal-9x4-previewstack__tile velgal-9x4-previewstack__tile--wide">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=82" alt="Analytics dashboard with charts" />
+            <div class="velgal-9x4-previewstack__caption">
+              <span>Analytics command center</span>
+              <span>02</span>
+            </div>
+          </div>
+          <div class="velgal-9x4-previewstack__tile velgal-9x4-previewstack__tile--small">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=650&q=82" alt="Engineers collaborating around computers" />
+          </div>
         </div>
       </div>
-      <div class="site-footer__bottom">
-        <span>© 2025 Velocity, Inc. All rights reserved.</span>
-        <div class="flex gap-4">
-          <a href="#" class="footer-link" aria-label="Twitter / X">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg>
-          </a>
-          <a href="#" class="footer-link" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
-          </a>
-          <a href="#" class="footer-link" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-          </a>
+    </section>
+
+    <section class="velgal-9x4-galleryarea" id="velgal-9x4-gallery">
+      <div class="velgal-9x4-shell">
+        <div class="velgal-9x4-sectionhead velgal-9x4-reveal">
+          <span class="velgal-9x4-eyebrow">Curated collection</span>
+          <h2 class="velgal-9x4-sectionhead__title">Snapshots from the product teams shipping faster.</h2>
+          <p class="velgal-9x4-sectionhead__text">Filter by category, open any image, and move through the collection with your keyboard or the on-screen controls.</p>
         </div>
+
+        <div class="velgal-9x4-filterbar velgal-9x4-reveal" role="toolbar" aria-label="Filter gallery items">
+          <button class="velgal-9x4-filterbar__button" type="button" aria-pressed="true" data-velgal-9x4-filter="all">All work</button>
+          <button class="velgal-9x4-filterbar__button" type="button" aria-pressed="false" data-velgal-9x4-filter="product">Product UI</button>
+          <button class="velgal-9x4-filterbar__button" type="button" aria-pressed="false" data-velgal-9x4-filter="teams">Teams</button>
+          <button class="velgal-9x4-filterbar__button" type="button" aria-pressed="false" data-velgal-9x4-filter="analytics">Analytics</button>
+          <button class="velgal-9x4-filterbar__button" type="button" aria-pressed="false" data-velgal-9x4-filter="integrations">Integrations</button>
+          <button class="velgal-9x4-filterbar__button" type="button" aria-pressed="false" data-velgal-9x4-filter="launches">Launches</button>
+        </div>
+
+        <div class="velgal-9x4-gallerygrid" aria-live="polite">
+          <article class="velgal-9x4-galleryitem velgal-9x4-galleryitem--wide velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Sprint planning board" data-velgal-9x4-category="product" data-velgal-9x4-title="Sprint planning board" data-velgal-9x4-tag="Product UI" data-velgal-9x4-meta="Velocity workspace · 2025" data-velgal-9x4-description="A collaborative planning surface where product, design, and engineering align priorities before work begins." data-velgal-9x4-image="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1500&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1000&q=82" alt="Team planning with sticky notes on a glass wall" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Product UI</span>
+                <h3 class="velgal-9x4-galleryitem__title">Sprint planning board</h3>
+                <p class="velgal-9x4-galleryitem__meta">Velocity workspace · 2025</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-galleryitem--tall velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Launch room energy" data-velgal-9x4-category="launches" data-velgal-9x4-title="Launch room energy" data-velgal-9x4-tag="Launches" data-velgal-9x4-meta="Release day · 11:42 AM" data-velgal-9x4-description="A launch team watching live adoption metrics climb minutes after shipping a major product update." data-velgal-9x4-image="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=82" alt="Team gathered around laptops during a launch" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Launches</span>
+                <h3 class="velgal-9x4-galleryitem__title">Launch room energy</h3>
+                <p class="velgal-9x4-galleryitem__meta">Release day · 11:42 AM</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Conversion dashboard" data-velgal-9x4-category="analytics" data-velgal-9x4-title="Conversion dashboard" data-velgal-9x4-tag="Analytics" data-velgal-9x4-meta="Growth team · Live funnel" data-velgal-9x4-description="Real-time funnel diagnostics help teams spot drop-offs, attribute growth, and improve customer activation." data-velgal-9x4-image="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=82" alt="Data visualization dashboard on laptop screen" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Analytics</span>
+                <h3 class="velgal-9x4-galleryitem__title">Conversion dashboard</h3>
+                <p class="velgal-9x4-galleryitem__meta">Growth team · Live funnel</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Integration canvas" data-velgal-9x4-category="integrations" data-velgal-9x4-title="Integration canvas" data-velgal-9x4-tag="Integrations" data-velgal-9x4-meta="GitHub + Slack + Linear" data-velgal-9x4-description="A visual integration map connecting the tools teams already love with automated product workflows." data-velgal-9x4-image="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=82" alt="Laptop showing connected software tools" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Integrations</span>
+                <h3 class="velgal-9x4-galleryitem__title">Integration canvas</h3>
+                <p class="velgal-9x4-galleryitem__meta">GitHub + Slack + Linear</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Remote design critique" data-velgal-9x4-category="teams" data-velgal-9x4-title="Remote design critique" data-velgal-9x4-tag="Teams" data-velgal-9x4-meta="Distributed team · 6 cities" data-velgal-9x4-description="Designers, engineers, and PMs collaborate asynchronously with comments, annotations, and decision trails." data-velgal-9x4-image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=82" alt="Team collaborating at a table" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Teams</span>
+                <h3 class="velgal-9x4-galleryitem__title">Remote design critique</h3>
+                <p class="velgal-9x4-galleryitem__meta">Distributed team · 6 cities</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-galleryitem--wide velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Executive insights wall" data-velgal-9x4-category="analytics" data-velgal-9x4-title="Executive insights wall" data-velgal-9x4-tag="Analytics" data-velgal-9x4-meta="Board-ready reporting" data-velgal-9x4-description="A high-level performance wall that keeps leadership aligned around product health, velocity, and growth signals." data-velgal-9x4-image="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1500&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=1000&q=82" alt="Business team reviewing analytics on a wall screen" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Analytics</span>
+                <h3 class="velgal-9x4-galleryitem__title">Executive insights wall</h3>
+                <p class="velgal-9x4-galleryitem__meta">Board-ready reporting</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-galleryitem--tall velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Mobile release preview" data-velgal-9x4-category="product" data-velgal-9x4-title="Mobile release preview" data-velgal-9x4-tag="Product UI" data-velgal-9x4-meta="Beta app · v4.2" data-velgal-9x4-description="A clean mobile release flow designed for faster QA sign-off and effortless stakeholder review." data-velgal-9x4-image="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=82" alt="Smartphone product interface preview" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Product UI</span>
+                <h3 class="velgal-9x4-galleryitem__title">Mobile release preview</h3>
+                <p class="velgal-9x4-galleryitem__meta">Beta app · v4.2</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Support workflow map" data-velgal-9x4-category="integrations" data-velgal-9x4-title="Support workflow map" data-velgal-9x4-tag="Integrations" data-velgal-9x4-meta="Zendesk + Jira routing" data-velgal-9x4-description="Customer feedback moves from support tickets to product priorities with automated routing and clear ownership." data-velgal-9x4-image="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=82" alt="People working through customer support workflows" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Integrations</span>
+                <h3 class="velgal-9x4-galleryitem__title">Support workflow map</h3>
+                <p class="velgal-9x4-galleryitem__meta">Zendesk + Jira routing</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Founder demo session" data-velgal-9x4-category="teams" data-velgal-9x4-title="Founder demo session" data-velgal-9x4-tag="Teams" data-velgal-9x4-meta="Customer feedback loop" data-velgal-9x4-description="A founder-led demo captures customer reactions, objections, and feature requests directly inside Velocity." data-velgal-9x4-image="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=82" alt="Founder presenting a product demo to a team" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Teams</span>
+                <h3 class="velgal-9x4-galleryitem__title">Founder demo session</h3>
+                <p class="velgal-9x4-galleryitem__meta">Customer feedback loop</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+
+          <article class="velgal-9x4-galleryitem velgal-9x4-galleryitem--wide velgal-9x4-reveal" tabindex="0" role="button" aria-label="Open gallery item: Midnight deployment" data-velgal-9x4-category="launches" data-velgal-9x4-title="Midnight deployment" data-velgal-9x4-tag="Launches" data-velgal-9x4-meta="Zero downtime rollout" data-velgal-9x4-description="Release confidence in action: gradual rollouts, instant rollback controls, and observability in one shared view." data-velgal-9x4-image="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1500&q=86">
+            <img class="velgal-9x4-galleryitem__image" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1000&q=82" alt="Engineering team working in a dim office at night" loading="lazy" />
+            <div class="velgal-9x4-galleryitem__shade"></div>
+            <div class="velgal-9x4-galleryitem__details">
+              <div>
+                <span class="velgal-9x4-galleryitem__tag">Launches</span>
+                <h3 class="velgal-9x4-galleryitem__title">Midnight deployment</h3>
+                <p class="velgal-9x4-galleryitem__meta">Zero downtime rollout</p>
+              </div>
+              <span class="velgal-9x4-galleryitem__openicon" aria-hidden="true">↗</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="velgal-9x4-storyband" id="velgal-9x4-stories">
+      <div class="velgal-9x4-shell">
+        <div class="velgal-9x4-storyband__panel velgal-9x4-reveal">
+          <div class="velgal-9x4-storyband__copy">
+            <span class="velgal-9x4-eyebrow">Featured story</span>
+            <h2 class="velgal-9x4-storyband__title">How CloudNova turned scattered launch assets into one visual source of truth.</h2>
+            <p class="velgal-9x4-storyband__text">Before Velocity, launch collateral lived across folders, docs, screenshots, and Slack threads. Their team now uses a shared product gallery to capture decisions, showcase progress, and bring every stakeholder into the same story.</p>
+            <ul class="velgal-9x4-storyband__list">
+              <li class="velgal-9x4-storyband__item">
+                <svg class="velgal-9x4-storyband__check" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                42% faster executive approvals with visual release summaries.
+              </li>
+              <li class="velgal-9x4-storyband__item">
+                <svg class="velgal-9x4-storyband__check" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                One place for product shots, annotations, insights, and launch notes.
+              </li>
+              <li class="velgal-9x4-storyband__item">
+                <svg class="velgal-9x4-storyband__check" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+                Reusable galleries for sales demos, customer updates, and investor decks.
+              </li>
+            </ul>
+          </div>
+          <div class="velgal-9x4-storyband__media">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=86" alt="Product team presenting a launch story in a meeting room" loading="lazy" />
+            <div class="velgal-9x4-storyband__float">
+              <span class="velgal-9x4-storyband__floatstrong">“The gallery became our product memory.”</span>
+              <span class="velgal-9x4-storyband__floatsmall">CloudNova’s design, engineering, and GTM teams now review every launch through one curated visual timeline.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="velgal-9x4-cta" id="velgal-9x4-cta">
+      <div class="velgal-9x4-shell">
+        <div class="velgal-9x4-cta__panel velgal-9x4-reveal">
+          <h2 class="velgal-9x4-cta__title">Have a Velocity moment worth sharing?</h2>
+          <p class="velgal-9x4-cta__text">Submit your team’s best dashboard, launch snapshot, workflow, or customer story. We feature polished examples from teams building better products together.</p>
+          <div class="velgal-9x4-cta__actions">
+            <a class="velgal-9x4-cta__button" href="mailto:gallery@velocity.example">Submit a gallery item</a>
+            <a class="velgal-9x4-cta__button velgal-9x4-cta__button--ghost" href="#velgal-9x4-gallery">Keep browsing</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="velgal-9x4-footer">
+    <div class="velgal-9x4-shell velgal-9x4-footer__inner">
+      <a class="velgal-9x4-brand" href="#velgal-9x4-top">
+        <span class="velgal-9x4-brand__mark">V</span>
+        Velocity
+      </a>
+      <div class="velgal-9x4-footer__links" aria-label="Footer links">
+        <a class="velgal-9x4-footer__link" href="#velgal-9x4-gallery">Gallery</a>
+        <a class="velgal-9x4-footer__link" href="#velgal-9x4-stories">Stories</a>
+        <a class="velgal-9x4-footer__link" href="#velgal-9x4-cta">Submit work</a>
+      </div>
+      <span>© 2025 Velocity, Inc.</span>
+    </div>
+  </footer>
+
+  <div class="velgal-9x4-lightbox" id="velgal-9x4-lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="velgal-9x4-lightbox-title">
+    <div class="velgal-9x4-lightbox__dialog">
+      <div class="velgal-9x4-lightbox__media">
+        <img class="velgal-9x4-lightbox__image" id="velgal-9x4-lightbox-image" src="" alt="" />
+        <button class="velgal-9x4-lightbox__close" type="button" id="velgal-9x4-lightbox-close" aria-label="Close gallery item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="velgal-9x4-lightbox__control velgal-9x4-lightbox__control--previous" type="button" id="velgal-9x4-lightbox-previous" aria-label="Previous gallery item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="velgal-9x4-lightbox__control velgal-9x4-lightbox__control--next" type="button" id="velgal-9x4-lightbox-next" aria-label="Next gallery item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+      <div class="velgal-9x4-lightbox__body">
+        <div>
+          <div class="velgal-9x4-lightbox__tag" id="velgal-9x4-lightbox-tag">Product UI</div>
+          <h2 class="velgal-9x4-lightbox__title" id="velgal-9x4-lightbox-title">Gallery item</h2>
+          <p class="velgal-9x4-lightbox__text" id="velgal-9x4-lightbox-text">Description</p>
+        </div>
+        <div class="velgal-9x4-lightbox__count" id="velgal-9x4-lightbox-count">1 / 10</div>
       </div>
     </div>
-  </footer><script>
-    /* ---- Theme toggle ---- */
-    document.querySelectorAll('[aria-label="Toggle theme"]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        document.documentElement.classList.toggle('dark');
-      });
-    });
+  </div>
 
-    /* ---- Mobile nav toggle ---- */
-    (function() {
-      var toggleBtn = document.querySelector('.mobile-toggle');
-      var mobileNav = document.querySelector('.mobile-nav');
-      if (!toggleBtn || !mobileNav) return;
+  <script>
+    (function () {
+      var velgal9x4Root = document.documentElement;
+      var velgal9x4ThemeToggle = document.querySelector("#velgal-9x4-theme-toggle");
+      var velgal9x4MenuToggle = document.querySelector("#velgal-9x4-menu-toggle");
+      var velgal9x4MobilePanel = document.querySelector("#velgal-9x4-mobile-panel");
+      var velgal9x4FilterButtons = Array.prototype.slice.call(document.querySelectorAll(".velgal-9x4-filterbar__button"));
+      var velgal9x4GalleryItems = Array.prototype.slice.call(document.querySelectorAll(".velgal-9x4-galleryitem"));
+      var velgal9x4Lightbox = document.querySelector("#velgal-9x4-lightbox");
+      var velgal9x4LightboxImage = document.querySelector("#velgal-9x4-lightbox-image");
+      var velgal9x4LightboxTitle = document.querySelector("#velgal-9x4-lightbox-title");
+      var velgal9x4LightboxTag = document.querySelector("#velgal-9x4-lightbox-tag");
+      var velgal9x4LightboxText = document.querySelector("#velgal-9x4-lightbox-text");
+      var velgal9x4LightboxCount = document.querySelector("#velgal-9x4-lightbox-count");
+      var velgal9x4LightboxClose = document.querySelector("#velgal-9x4-lightbox-close");
+      var velgal9x4LightboxPrevious = document.querySelector("#velgal-9x4-lightbox-previous");
+      var velgal9x4LightboxNext = document.querySelector("#velgal-9x4-lightbox-next");
+      var velgal9x4VisibleItems = velgal9x4GalleryItems.slice();
+      var velgal9x4CurrentIndex = 0;
+      var velgal9x4LastFocusedElement = null;
 
-      toggleBtn.addEventListener('click', function() {
-        var isOpen = mobileNav.classList.toggle('is-open');
-        toggleBtn.setAttribute('aria-expanded', isOpen);
-      });
+      function velgal9x4ApplyTheme(velgal9x4Mode) {
+        velgal9x4Root.setAttribute("data-velgal-9x4-theme", velgal9x4Mode);
+        try {
+          localStorage.setItem("velgal-9x4-theme", velgal9x4Mode);
+        } catch (velgal9x4Error) {}
+      }
 
-      // Close mobile nav when a link is clicked
-      mobileNav.querySelectorAll('.nav-link, .btn').forEach(function(link) {
-        link.addEventListener('click', function() {
-          mobileNav.classList.remove('is-open');
-          toggleBtn.setAttribute('aria-expanded', 'false');
-        });
-      });
-    })();
+      function velgal9x4InitTheme() {
+        var velgal9x4StoredTheme = null;
+        try {
+          velgal9x4StoredTheme = localStorage.getItem("velgal-9x4-theme");
+        } catch (velgal9x4Error) {}
 
-    /* ---- Accordion ---- */
-    document.querySelectorAll('.accordion__trigger').forEach(function(trigger) {
-      trigger.addEventListener('click', function() {
-        var item = this.closest('.accordion__item');
-        var content = item.querySelector('.accordion__content');
-        var isOpen = item.classList.contains('is-open');
-
-        // Close all siblings in this accordion
-        var accordion = item.closest('.accordion');
-        accordion.querySelectorAll('.accordion__item').forEach(function(sibling) {
-          sibling.classList.remove('is-open');
-          sibling.querySelector('.accordion__trigger').setAttribute('aria-expanded', 'false');
-          sibling.querySelector('.accordion__content').style.maxHeight = null;
-        });
-
-        // Toggle current
-        if (!isOpen) {
-          item.classList.add('is-open');
-          this.setAttribute('aria-expanded', 'true');
-          content.style.maxHeight = content.scrollHeight + 'px';
+        if (velgal9x4StoredTheme) {
+          velgal9x4ApplyTheme(velgal9x4StoredTheme);
+          return;
         }
-      });
-    });
 
-    /* ---- Scroll reveal ---- */
-    (function() {
-      var reveals = document.querySelectorAll('.reveal');
-      if (!reveals.length) return;
+        var velgal9x4PrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        velgal9x4ApplyTheme(velgal9x4PrefersDark ? "dark" : "light");
+      }
 
-      if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function(entries) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('is-visible');
-              observer.unobserve(entry.target);
+      function velgal9x4ToggleTheme() {
+        var velgal9x4CurrentTheme = velgal9x4Root.getAttribute("data-velgal-9x4-theme") || "light";
+        velgal9x4ApplyTheme(velgal9x4CurrentTheme === "dark" ? "light" : "dark");
+      }
+
+      function velgal9x4CloseMobilePanel() {
+        if (!velgal9x4MenuToggle || !velgal9x4MobilePanel) return;
+        velgal9x4MenuToggle.setAttribute("aria-expanded", "false");
+        velgal9x4MobilePanel.setAttribute("data-velgal-9x4-menu-state", "closed");
+      }
+
+      function velgal9x4ToggleMobilePanel() {
+        if (!velgal9x4MenuToggle || !velgal9x4MobilePanel) return;
+        var velgal9x4IsOpen = velgal9x4MobilePanel.getAttribute("data-velgal-9x4-menu-state") === "open";
+        velgal9x4MenuToggle.setAttribute("aria-expanded", String(!velgal9x4IsOpen));
+        velgal9x4MobilePanel.setAttribute("data-velgal-9x4-menu-state", velgal9x4IsOpen ? "closed" : "open");
+      }
+
+      function velgal9x4UpdateVisibleItems() {
+        velgal9x4VisibleItems = velgal9x4GalleryItems.filter(function (velgal9x4Item) {
+          return !velgal9x4Item.hidden;
+        });
+      }
+
+      function velgal9x4FilterGallery(velgal9x4Filter) {
+        velgal9x4FilterButtons.forEach(function (velgal9x4Button) {
+          velgal9x4Button.setAttribute("aria-pressed", String(velgal9x4Button.getAttribute("data-velgal-9x4-filter") === velgal9x4Filter));
+        });
+
+        velgal9x4GalleryItems.forEach(function (velgal9x4Item) {
+          var velgal9x4Category = velgal9x4Item.getAttribute("data-velgal-9x4-category");
+          velgal9x4Item.hidden = !(velgal9x4Filter === "all" || velgal9x4Category === velgal9x4Filter);
+        });
+
+        velgal9x4UpdateVisibleItems();
+      }
+
+      function velgal9x4SetLightboxContent(velgal9x4Index) {
+        if (!velgal9x4VisibleItems.length) return;
+        velgal9x4CurrentIndex = (velgal9x4Index + velgal9x4VisibleItems.length) % velgal9x4VisibleItems.length;
+
+        var velgal9x4Item = velgal9x4VisibleItems[velgal9x4CurrentIndex];
+        var velgal9x4Title = velgal9x4Item.getAttribute("data-velgal-9x4-title") || "";
+        var velgal9x4Tag = velgal9x4Item.getAttribute("data-velgal-9x4-tag") || "";
+        var velgal9x4Description = velgal9x4Item.getAttribute("data-velgal-9x4-description") || "";
+        var velgal9x4Image = velgal9x4Item.getAttribute("data-velgal-9x4-image") || "";
+        var velgal9x4Meta = velgal9x4Item.getAttribute("data-velgal-9x4-meta") || "";
+
+        velgal9x4LightboxImage.src = velgal9x4Image;
+        velgal9x4LightboxImage.alt = velgal9x4Title + " — " + velgal9x4Meta;
+        velgal9x4LightboxTitle.textContent = velgal9x4Title;
+        velgal9x4LightboxTag.textContent = velgal9x4Tag;
+        velgal9x4LightboxText.textContent = velgal9x4Description;
+        velgal9x4LightboxCount.textContent = String(velgal9x4CurrentIndex + 1) + " / " + String(velgal9x4VisibleItems.length);
+      }
+
+      function velgal9x4OpenLightbox(velgal9x4Item) {
+        if (!velgal9x4Lightbox) return;
+        velgal9x4LastFocusedElement = document.activeElement;
+        velgal9x4UpdateVisibleItems();
+        var velgal9x4Index = velgal9x4VisibleItems.indexOf(velgal9x4Item);
+        velgal9x4SetLightboxContent(velgal9x4Index < 0 ? 0 : velgal9x4Index);
+        velgal9x4Lightbox.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        if (velgal9x4LightboxClose) velgal9x4LightboxClose.focus();
+      }
+
+      function velgal9x4CloseLightbox() {
+        if (!velgal9x4Lightbox) return;
+        velgal9x4Lightbox.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        if (velgal9x4LastFocusedElement && typeof velgal9x4LastFocusedElement.focus === "function") {
+          velgal9x4LastFocusedElement.focus();
+        }
+      }
+
+      function velgal9x4ShowPreviousItem() {
+        velgal9x4SetLightboxContent(velgal9x4CurrentIndex - 1);
+      }
+
+      function velgal9x4ShowNextItem() {
+        velgal9x4SetLightboxContent(velgal9x4CurrentIndex + 1);
+      }
+
+      function velgal9x4InitReveal() {
+        var velgal9x4RevealItems = Array.prototype.slice.call(document.querySelectorAll(".velgal-9x4-reveal"));
+
+        if (!("IntersectionObserver" in window)) {
+          velgal9x4RevealItems.forEach(function (velgal9x4Item) {
+            velgal9x4Item.setAttribute("data-velgal-9x4-reveal-state", "visible");
+          });
+          return;
+        }
+
+        var velgal9x4Observer = new IntersectionObserver(function (velgal9x4Entries) {
+          velgal9x4Entries.forEach(function (velgal9x4Entry) {
+            if (velgal9x4Entry.isIntersecting) {
+              velgal9x4Entry.target.setAttribute("data-velgal-9x4-reveal-state", "visible");
+              velgal9x4Observer.unobserve(velgal9x4Entry.target);
             }
           });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 
-        reveals.forEach(function(el) { observer.observe(el); });
-      } else {
-        // Fallback: show everything
-        reveals.forEach(function(el) { el.classList.add('is-visible'); });
+        velgal9x4RevealItems.forEach(function (velgal9x4Item) {
+          velgal9x4Observer.observe(velgal9x4Item);
+        });
       }
-    })();
 
-    /* ---- Smooth scroll for anchor links (fallback for older browsers) ---- */
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-      anchor.addEventListener('click', function(e) {
-        var target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth' });
+      velgal9x4InitTheme();
+      velgal9x4InitReveal();
+
+      if (velgal9x4ThemeToggle) {
+        velgal9x4ThemeToggle.addEventListener("click", velgal9x4ToggleTheme);
+      }
+
+      if (velgal9x4MenuToggle) {
+        velgal9x4MenuToggle.addEventListener("click", velgal9x4ToggleMobilePanel);
+      }
+
+      if (velgal9x4MobilePanel) {
+        velgal9x4MobilePanel.querySelectorAll("a").forEach(function (velgal9x4Link) {
+          velgal9x4Link.addEventListener("click", velgal9x4CloseMobilePanel);
+        });
+      }
+
+      velgal9x4FilterButtons.forEach(function (velgal9x4Button) {
+        velgal9x4Button.addEventListener("click", function () {
+          velgal9x4FilterGallery(velgal9x4Button.getAttribute("data-velgal-9x4-filter") || "all");
+        });
+      });
+
+      velgal9x4GalleryItems.forEach(function (velgal9x4Item) {
+        velgal9x4Item.addEventListener("click", function () {
+          velgal9x4OpenLightbox(velgal9x4Item);
+        });
+
+        velgal9x4Item.addEventListener("keydown", function (velgal9x4Event) {
+          if (velgal9x4Event.key === "Enter" || velgal9x4Event.key === " ") {
+            velgal9x4Event.preventDefault();
+            velgal9x4OpenLightbox(velgal9x4Item);
+          }
+        });
+      });
+
+      if (velgal9x4LightboxClose) {
+        velgal9x4LightboxClose.addEventListener("click", velgal9x4CloseLightbox);
+      }
+
+      if (velgal9x4LightboxPrevious) {
+        velgal9x4LightboxPrevious.addEventListener("click", velgal9x4ShowPreviousItem);
+      }
+
+      if (velgal9x4LightboxNext) {
+        velgal9x4LightboxNext.addEventListener("click", velgal9x4ShowNextItem);
+      }
+
+      if (velgal9x4Lightbox) {
+        velgal9x4Lightbox.addEventListener("click", function (velgal9x4Event) {
+          if (velgal9x4Event.target === velgal9x4Lightbox) {
+            velgal9x4CloseLightbox();
+          }
+        });
+      }
+
+      document.addEventListener("keydown", function (velgal9x4Event) {
+        var velgal9x4LightboxOpen = velgal9x4Lightbox && velgal9x4Lightbox.getAttribute("aria-hidden") === "false";
+
+        if (velgal9x4Event.key === "Escape") {
+          velgal9x4CloseMobilePanel();
+          if (velgal9x4LightboxOpen) velgal9x4CloseLightbox();
+        }
+
+        if (!velgal9x4LightboxOpen) return;
+
+        if (velgal9x4Event.key === "ArrowLeft") {
+          velgal9x4ShowPreviousItem();
+        }
+
+        if (velgal9x4Event.key === "ArrowRight") {
+          velgal9x4ShowNextItem();
         }
       });
-    });
-  </script></body></html>
+
+      window.addEventListener("resize", function () {
+        if (window.innerWidth >= 850) velgal9x4CloseMobilePanel();
+      });
+    })();
+  </script>
+</body>
+</html>
