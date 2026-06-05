@@ -1,14 +1,272 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>klar-site-4</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-  </head>
-  <body>
-    <h1>klar-site-4</h1>
-    <p>Edit this page with Klar.</p>
-  </body>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nordisk Digital | Strategi, design och webbutveckling</title>
+  <meta name="description" content="Nordisk Digital hjälper svenska företag att skapa snabba, tydliga och affärsdrivande webbplatser med strategi, design och modern webbutveckling." />
+  <link rel="canonical" href="index.html" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Nordisk Digital startsida">
+        <span class="brand-mark">ND</span>
+        <span>Nordisk Digital</span>
+      </a>
+
+      <nav class="nav-menu" id="primary-navigation" aria-label="Huvudmeny">
+        <a class="nav-link" href="index.html" aria-current="page">Startsida</a>
+        <a class="nav-link" href="about.html">Om oss</a>
+        <a class="nav-link" href="contact.html">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" type="button" aria-label="Toggle theme">Tema</button>
+        <a class="btn btn-primary" href="contact.html">Boka möte</a>
+      </div>
+
+      <button class="mobile-toggle" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="mobile-toggle__bars"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="badge badge-primary">Digital partner för växande företag</span>
+          <h1>Vi bygger webbplatser som stärker varumärket och skapar fler affärer.</h1>
+          <p class="hero__lead">Nordisk Digital hjälper företag att gå från spretig digital närvaro till en snabb, tydlig och mätbar webbupplevelse – byggd med strategi, design och robust teknik.</p>
+          <div class="hero__actions">
+            <a class="btn btn-primary btn-lg" href="contact.html">Boka kostnadsfri rådgivning</a>
+            <a class="btn btn-outline btn-lg" href="about.html">Så arbetar vi</a>
+          </div>
+          <div class="stat-grid w-full max-w-xl">
+            <div class="stat-card">
+              <div class="stat-card__value">42%</div>
+              <p class="stat-card__label">snabbare laddtider i genomsnitt</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__value">18+</div>
+              <p class="stat-card__label">branscher med genomförda projekt</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1400&q=80" alt="Team som planerar digital strategi vid ett konferensbord" />
+          <div class="hero-panel">
+            <strong>Strategi, design och teknik i samma team</strong>
+            <p>En tydlig process från första analys till lansering och löpande optimering.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pt-0">
+      <div class="container split">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Om företaget</span>
+          <h2>En trygg partner när digitala initiativ behöver bli affärsresultat.</h2>
+        </div>
+        <div class="stack reveal">
+          <p class="lead">Vi kombinerar rådgivning, UX, webbutveckling och analys för att skapa lösningar som är enkla att använda, lätta att förvalta och byggda för tillväxt.</p>
+          <p>Vårt arbetssätt passar företag som vill ha hög kvalitet utan onödig komplexitet. Vi prioriterar tydlighet, prestanda och långsiktig hållbarhet framför kortsiktiga genvägar.</p>
+          <a class="cta-link" href="about.html">Lär känna oss →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container stack">
+        <div class="section-heading section-heading--center reveal">
+          <span class="section-kicker">Tjänster</span>
+          <h2>Helheten som krävs för en modern webbplats.</h2>
+          <p class="lead">Från strategi till optimering – samma system, samma målbild och samma höga kvalitet genom hela projektet.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article class="card service-card reveal">
+            <div class="card__header">
+              <span class="icon-box">S</span>
+              <h3 class="card__title">Digital strategi</h3>
+            </div>
+            <div class="card__body">
+              <p class="card__text">Vi definierar mål, målgrupper, innehållsstruktur och prioriteringar så att webbplatsen blir ett affärsverktyg – inte bara en kanal.</p>
+            </div>
+            <div class="card__footer">
+              <span class="text-sm text-muted-foreground">Passar vid</span>
+              <strong>Nystart</strong>
+            </div>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="card__header">
+              <span class="icon-box">D</span>
+              <h3 class="card__title">UX och visuell design</h3>
+            </div>
+            <div class="card__body">
+              <p class="card__text">Vi skapar tydliga användarflöden, stark visuell hierarki och tillgängliga gränssnitt som känns professionella på varje skärm.</p>
+            </div>
+            <div class="card__footer">
+              <span class="text-sm text-muted-foreground">Fokus</span>
+              <strong>Tydlighet</strong>
+            </div>
+          </article>
+
+          <article class="card service-card reveal">
+            <div class="card__header">
+              <span class="icon-box">T</span>
+              <h3 class="card__title">Webbutveckling</h3>
+            </div>
+            <div class="card__body">
+              <p class="card__text">Vi bygger snabb, responsiv och robust kod med semantisk HTML, modern CSS och tillgänglighet som grundkrav.</p>
+            </div>
+            <div class="card__footer">
+              <span class="text-sm text-muted-foreground">Resultat</span>
+              <strong>Prestanda</strong>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container stack">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Kundnytta</span>
+          <h2>Varför företag väljer Nordisk Digital.</h2>
+          <p class="lead">Vi bygger inte bara snygga gränssnitt. Vi hjälper dig att skapa en digital närvaro som är lätt att förstå, lätt att mäta och lätt att vidareutveckla.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="card benefit-card p-6 reveal">
+            <span class="badge badge-accent">Effekt</span>
+            <h3 class="card__title mt-4">Tydligare erbjudande</h3>
+            <p class="mt-4">Besökare förstår snabbare vad ni gör, varför det spelar roll och vilket nästa steg de ska ta.</p>
+          </article>
+
+          <article class="card benefit-card p-6 reveal">
+            <span class="badge badge-accent">Hastighet</span>
+            <h3 class="card__title mt-4">Bättre prestanda</h3>
+            <p class="mt-4">Lätt kod, smart struktur och optimerade flöden ger snabbare upplevelser och bättre förutsättningar för SEO.</p>
+          </article>
+
+          <article class="card benefit-card p-6 reveal">
+            <span class="badge badge-accent">Kontroll</span>
+            <h3 class="card__title mt-4">Enklare förvaltning</h3>
+            <p class="mt-4">Återanvändbara komponenter och tydliga mönster gör innehåll, kampanjer och vidareutveckling enklare över tid.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container stack">
+        <div class="section-heading section-heading--center reveal">
+          <span class="section-kicker">Kundröster</span>
+          <h2>Resultat som märks i vardagen.</h2>
+          <p class="lead">Våra kunder uppskattar framför allt tydligheten: i processen, i kommunikationen och i den färdiga lösningen.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <article class="testimonial-card card reveal">
+            <blockquote>“Vi fick en webbplats som både säljer bättre och är enklare att arbeta med. Nordisk Digital gjorde komplexa val begripliga.”</blockquote>
+            <div class="avatar-row">
+              <span class="avatar">ML</span>
+              <div>
+                <strong>Maria Lind</strong>
+                <p class="text-sm">Marknadschef, Västkust Energi</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card card reveal">
+            <blockquote>“Processen var tydlig, effektiv och trygg från första workshop till lansering. Vi visste alltid vad som hände och varför.”</blockquote>
+            <div class="avatar-row">
+              <span class="avatar">EK</span>
+              <div>
+                <strong>Erik Karlsson</strong>
+                <p class="text-sm">Grundare, Formera Studio</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card card reveal">
+            <blockquote>“Äntligen har vi en digital plattform som speglar kvaliteten i vårt erbjudande och som teamet faktiskt vill använda.”</blockquote>
+            <div class="avatar-row">
+              <span class="avatar">SN</span>
+              <div>
+                <strong>Sara Nyström</strong>
+                <p class="text-sm">VD, Norrhamn Konsult</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="stack">
+              <span class="badge">Redo att börja?</span>
+              <h2>Ta nästa steg mot en tydligare digital närvaro.</h2>
+              <p>Berätta kort om era mål, så återkommer vi med förslag på hur vi kan prioritera rätt och skapa snabb effekt.</p>
+            </div>
+            <div class="cluster justify-start md:items-center">
+              <a class="btn btn-primary btn-lg" href="contact.html">Boka rådgivning</a>
+              <a class="btn btn-outline btn-lg" href="about.html">Läs mer om oss</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html" aria-label="Nordisk Digital startsida">
+            <span class="brand-mark">ND</span>
+            <span>Nordisk Digital</span>
+          </a>
+          <p>Strategi, design och webbutveckling för företag som vill växa digitalt med kvalitet, tydlighet och tempo.</p>
+        </div>
+
+        <div class="footer-col">
+          <strong class="footer-title">Sidor</strong>
+          <a class="footer-link" href="index.html">Startsida</a>
+          <a class="footer-link" href="about.html">Om oss</a>
+          <a class="footer-link" href="contact.html">Kontakt</a>
+        </div>
+
+        <div class="footer-col">
+          <strong class="footer-title">Tjänster</strong>
+          <a class="footer-link" href="about.html">Digital strategi</a>
+          <a class="footer-link" href="about.html">UX och design</a>
+          <a class="footer-link" href="about.html">Webbutveckling</a>
+        </div>
+
+        <div class="footer-col">
+          <strong class="footer-title">Kontakt</strong>
+          <a class="footer-link" href="mailto:hej@nordiskdigital.se">hej@nordiskdigital.se</a>
+          <a class="footer-link" href="tel:+4681234567">08-123 45 67</a>
+          <a class="footer-link" href="contact.html">Boka möte</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Nordisk Digital AB. Alla rättigheter förbehållna.</span>
+        <span>Byggd med tillgänglighet och prestanda i fokus.</span>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

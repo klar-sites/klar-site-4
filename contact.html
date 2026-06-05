@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt | Nordisk Digital</title>
+  <meta name="description" content="Kontakta Nordisk Digital för rådgivning kring strategi, design och webbutveckling. Skicka en förfrågan eller boka ett första samtal." />
+  <link rel="canonical" href="contact.html" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Nordisk Digital startsida">
+        <span class="brand-mark">ND</span>
+        <span>Nordisk Digital</span>
+      </a>
+
+      <nav class="nav-menu" id="primary-navigation" aria-label="Huvudmeny">
+        <a class="nav-link" href="index.html">Startsida</a>
+        <a class="nav-link" href="about.html">Om oss</a>
+        <a class="nav-link" href="contact.html" aria-current="page">Kontakt</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" type="button" aria-label="Toggle theme">Tema</button>
+        <a class="btn btn-primary" href="#kontaktformular">Boka möte</a>
+      </div>
+
+      <button class="mobile-toggle" type="button" aria-label="Öppna meny" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="mobile-toggle__bars"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <span class="badge badge-primary">Kontakt</span>
+          <h1>Berätta vad ni vill förbättra – vi hjälper er hitta nästa steg.</h1>
+          <p class="hero__lead">Oavsett om ni planerar en ny webbplats, vill förbättra en befintlig lösning eller behöver en tydligare digital strategi börjar vi gärna med ett förutsättningslöst samtal.</p>
+          <div class="hero__actions">
+            <a class="btn btn-primary btn-lg" href="#kontaktformular">Skicka förfrågan</a>
+            <a class="btn btn-outline btn-lg" href="about.html">Läs om processen</a>
+          </div>
+        </div>
+
+        <div class="contact-panel reveal">
+          <span class="section-kicker">Snabb kontakt</span>
+          <h2>Vi återkommer normalt inom en arbetsdag.</h2>
+          <p>Skicka ett meddelande via formuläret eller kontakta oss direkt via e-post eller telefon.</p>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="icon-box">E</span>
+              <div>
+                <strong>E-post</strong>
+                <p><a class="cta-link" href="mailto:hej@nordiskdigital.se">hej@nordiskdigital.se</a></p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="icon-box">T</span>
+              <div>
+                <strong>Telefon</strong>
+                <p><a class="cta-link" href="tel:+4681234567">08-123 45 67</a></p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="icon-box">P</span>
+              <div>
+                <strong>Besöksadress</strong>
+                <p>Kungsgatan 12, 111 35 Stockholm</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pt-0" id="kontaktformular">
+      <div class="container split">
+        <div class="section-heading reveal">
+          <span class="section-kicker">Förfrågan</span>
+          <h2>Skicka ett meddelande så tar vi dialogen vidare.</h2>
+          <p class="lead">Ju mer du kan berätta om nuläge, mål och tidsplan, desto bättre kan vi återkomma med relevanta frågor och förslag.</p>
+
+          <div class="contact-panel mt-8">
+            <h3>Vad händer efter att du skickat?</h3>
+            <ul class="contact-list">
+              <li class="contact-item">
+                <span class="icon-box">1</span>
+                <div>
+                  <strong>Vi läser in oss</strong>
+                  <p>Vi går igenom din förfrågan och gör en första bedömning av behovet.</p>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="icon-box">2</span>
+                <div>
+                  <strong>Vi återkopplar</strong>
+                  <p>Du får svar inom en arbetsdag med förslag på nästa steg.</p>
+                </div>
+              </li>
+              <li class="contact-item">
+                <span class="icon-box">3</span>
+                <div>
+                  <strong>Vi bokar ett samtal</strong>
+                  <p>Om det känns rätt planerar vi ett kort rådgivningsmöte utan förpliktelser.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <form class="form card p-8 reveal" id="contact-form" action="#" method="post" novalidate>
+          <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+          <div class="form-row">
+            <div class="field">
+              <label class="label" for="name">Namn *</label>
+              <input class="input" id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error" />
+              <p class="form-error" id="name-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="label" for="email">E-post *</label>
+              <input class="input" id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-error" />
+              <p class="form-error" id="email-error"></p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label class="label" for="company">Företag</label>
+              <input class="input" id="company" name="company" type="text" autocomplete="organization" aria-describedby="company-error" />
+              <p class="form-error" id="company-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="label" for="service">Vad gäller det?</label>
+              <select class="select" id="service" name="service">
+                <option value="">Välj område</option>
+                <option value="strategy">Digital strategi</option>
+                <option value="design">UX och visuell design</option>
+                <option value="development">Webbutveckling</option>
+                <option value="optimization">Optimering av befintlig webbplats</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label" for="message">Meddelande *</label>
+            <textarea class="textarea" id="message" name="message" required minlength="20" aria-describedby="message-error" placeholder="Berätta kort om nuläge, mål, tidsplan och vad ni behöver hjälp med."></textarea>
+            <p class="form-error" id="message-error"></p>
+          </div>
+
+          <div class="field">
+            <label class="label" for="budget">Ungefärlig budget</label>
+            <select class="select" id="budget" name="budget">
+              <option value="">Inte bestämt</option>
+              <option value="small">Under 100 000 kr</option>
+              <option value="medium">100 000–250 000 kr</option>
+              <option value="large">250 000–500 000 kr</option>
+              <option value="enterprise">Över 500 000 kr</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary btn-lg" type="submit">Skicka förfrågan</button>
+          <p class="text-sm text-muted-foreground">Genom att skicka formuläret godkänner du att vi kontaktar dig kring din förfrågan. Vi delar inte dina uppgifter med tredje part.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="container split">
+        <div class="contact-panel reveal">
+          <span class="section-kicker">Företagsuppgifter</span>
+          <h2>Nordisk Digital AB</h2>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <span class="icon-box">O</span>
+              <div>
+                <strong>Organisationsnummer</strong>
+                <p>559123-4567</p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="icon-box">A</span>
+              <div>
+                <strong>Adress</strong>
+                <p>Kungsgatan 12<br />111 35 Stockholm</p>
+              </div>
+            </li>
+            <li class="contact-item">
+              <span class="icon-box">Ö</span>
+              <div>
+                <strong>Öppettider</strong>
+                <p>Måndag–fredag 09.00–17.00</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="map-placeholder reveal" aria-label="Kartplatshållare för Nordisk Digitals kontor i Stockholm">
+          <div>
+            <strong class="text-foreground">Karta över Stockholm</strong>
+            <p>Här kan en integrerad karta läggas in vid publicering.</p>
+            <a class="btn btn-outline mt-6" href="https://www.google.com/maps/search/Kungsgatan+12+Stockholm" target="_blank" rel="noopener noreferrer">Öppna i karttjänst</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="stack">
+              <span class="badge">Osäker på behovet?</span>
+              <h2>Börja med en kort rådgivning.</h2>
+              <p>Vi kan hjälpa er att reda ut nuläge, mål och möjliga insatser innan ni bestämmer omfattning eller budget.</p>
+            </div>
+            <div class="cluster justify-start md:items-center">
+              <a class="btn btn-primary btn-lg" href="mailto:hej@nordiskdigital.se">Mejla oss</a>
+              <a class="btn btn-outline btn-lg" href="about.html">Se hur vi arbetar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a class="brand" href="index.html" aria-label="Nordisk Digital startsida">
+            <span class="brand-mark">ND</span>
+            <span>Nordisk Digital</span>
+          </a>
+          <p>Strategi, design och webbutveckling för företag som vill växa digitalt med kvalitet, tydlighet och tempo.</p>
+        </div>
+
+        <div class="footer-col">
+          <strong class="footer-title">Sidor</strong>
+          <a class="footer-link" href="index.html">Startsida</a>
+          <a class="footer-link" href="about.html">Om oss</a>
+          <a class="footer-link" href="contact.html">Kontakt</a>
+        </div>
+
+        <div class="footer-col">
+          <strong class="footer-title">Tjänster</strong>
+          <a class="footer-link" href="about.html">Digital strategi</a>
+          <a class="footer-link" href="about.html">UX och design</a>
+          <a class="footer-link" href="about.html">Webbutveckling</a>
+        </div>
+
+        <div class="footer-col">
+          <strong class="footer-title">Kontakt</strong>
+          <a class="footer-link" href="mailto:hej@nordiskdigital.se">hej@nordiskdigital.se</a>
+          <a class="footer-link" href="tel:+4681234567">08-123 45 67</a>
+          <a class="footer-link" href="contact.html">Boka möte</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Nordisk Digital AB. Alla rättigheter förbehållna.</span>
+        <span>Byggd med tillgänglighet och prestanda i fokus.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

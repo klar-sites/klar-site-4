@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Designsystem | Nordisk digital partner</title>
+  <meta name="description" content="Levande designsystem och Klar-katalog för den svenska företagswebbplatsen." />
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    /* Documentation chrome only — not part of the design system. Every rule is prefixed .ds-. */
+    .ds-page { padding-block: 3rem; }
+    .ds-block { padding-block: 3rem; border-bottom: 1px solid var(--border); }
+    .ds-block:last-child { border-bottom: 0; }
+    .ds-note { max-width: 48rem; margin-top: .75rem; color: var(--muted-foreground); }
+    .ds-subhead { margin-top: 2.5rem; margin-bottom: 1rem; font-size: 1.25rem; }
+    .ds-specimens { display: flex; flex-wrap: wrap; gap: 1rem; align-items: flex-start; }
+    .ds-specimens--grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1rem; align-items: stretch; }
+    .ds-specimens--stack { display: grid; gap: 1.5rem; }
+    .ds-sections { gap: 2rem; }
+    .ds-swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .ds-swatch { overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--card); box-shadow: var(--shadow-sm); }
+    .ds-swatch__chip { min-height: 5rem; border-bottom: 1px solid var(--border); }
+    .ds-swatch__meta { padding: 1rem; }
+    .ds-swatch__meta strong { display: block; color: var(--foreground); }
+    .ds-swatch__meta code { color: var(--muted-foreground); font-size: .8rem; }
+    .ds-type-row { display: grid; gap: 1rem; padding-block: 1rem; border-bottom: 1px solid var(--border); }
+    .ds-type-row:last-child { border-bottom: 0; }
+    .ds-type-row code { color: var(--muted-foreground); font-size: .8rem; }
+    .ds-scale { display: grid; gap: .75rem; margin-top: 1.5rem; }
+    .ds-scale-row { display: grid; grid-template-columns: 6rem 1fr; gap: 1rem; align-items: center; }
+    .ds-scale-bar { height: 1rem; border-radius: var(--radius-full); background: linear-gradient(90deg, var(--primary), var(--accent)); }
+    .ds-radius-row, .ds-shadow-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+    .ds-radius-box, .ds-shadow-box { min-height: 6rem; padding: 1rem; border: 1px solid var(--border); background: var(--card); }
+    .ds-showcase-hero { padding: 5rem 1rem; background: radial-gradient(circle at top right, color-mix(in srgb, var(--accent) 24%, transparent), transparent 26rem), linear-gradient(135deg, var(--surface-strong), color-mix(in srgb, var(--primary) 28%, var(--surface-strong))); color: var(--surface-strong-foreground); }
+    .ds-showcase-hero__inner { max-width: var(--content-width); margin-inline: auto; display: grid; gap: 1.5rem; text-align: center; justify-items: center; }
+    .ds-showcase-hero__badge { color: var(--surface-strong-foreground); border-color: color-mix(in srgb, var(--surface-strong-foreground) 24%, transparent); background: color-mix(in srgb, var(--surface-strong-foreground) 9%, transparent); }
+    .ds-showcase-hero__title { max-width: 58rem; color: inherit; }
+    .ds-showcase-hero__lead { max-width: 44rem; color: color-mix(in srgb, var(--surface-strong-foreground) 78%, transparent); font-size: 1.25rem; }
+    .ds-showcase-hero__actions { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: center; }
+    .ds-showcase-hero__stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; width: min(100%, 42rem); margin-top: 1rem; }
+    .ds-showcase-hero__stat { padding: 1rem; border: 1px solid color-mix(in srgb, var(--surface-strong-foreground) 18%, transparent); border-radius: var(--radius-lg); background: color-mix(in srgb, var(--surface-strong-foreground) 8%, transparent); }
+    .ds-showcase-hero__stat strong { display: block; font-size: 1.5rem; line-height: 1; }
+    .ds-placeholder { min-height: 4rem; padding: 1rem; border: 1px dashed var(--border); border-radius: var(--radius-lg); background: var(--muted); color: var(--muted-foreground); }
+    .ds-grid-cell { padding: 1rem; border-radius: var(--radius-md); background: var(--muted); color: var(--foreground); }
+    @media (max-width: 767px) {
+      .ds-showcase-hero__stats { grid-template-columns: 1fr; }
+      .ds-scale-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Till toppen">
+        <span class="brand-mark">ND</span>
+        <span>Nordisk Digital</span>
+      </a>
+      <nav class="nav-menu" aria-label="Designsystem">
+        <a class="nav-link" href="#foundations">Grunder</a>
+        <a class="nav-link" href="#components">Komponenter</a>
+        <a class="nav-link" href="#sections">Sektioner</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn btn-outline" type="button" aria-label="Toggle theme">Växla tema</button>
+      </div>
+      <button class="mobile-toggle" type="button" aria-label="Öppna meny" aria-expanded="false">
+        <span class="mobile-toggle__bars"></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="ds-showcase-hero" id="top" aria-labelledby="ds-title">
+    <div class="ds-showcase-hero__inner">
+      <span class="badge ds-showcase-hero__badge">Levande designsystem</span>
+      <h1 class="ds-showcase-hero__title" id="ds-title">Ett token-drivet system för en modern svensk företagswebbplats</h1>
+      <p class="ds-showcase-hero__lead">Det här dokumentet visar färger, typografi, komponenter, layoutmönster och färdiga sektioner som används på webbplatsen – och fungerar samtidigt som Klar-katalog.</p>
+      <div class="ds-showcase-hero__actions">
+        <a class="btn btn-primary btn-lg" href="#sections">Visa sektioner</a>
+        <a class="btn btn-outline btn-lg" href="../index.html">Öppna startsidan</a>
+      </div>
+      <div class="ds-showcase-hero__stats" aria-label="Systemöversikt">
+        <div class="ds-showcase-hero__stat"><strong>3</strong><span>Sidor</span></div>
+        <div class="ds-showcase-hero__stat"><strong>12+</strong><span>Komponenter</span></div>
+        <div class="ds-showcase-hero__stat"><strong>2</strong><span>Teman</span></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container ds-page">
+    <section class="ds-block" id="foundations">
+      <h2>Foundations</h2>
+      <p class="ds-note">Grunderna hämtas direkt från <code>style.css</code>: semantiska färger, typskala, avstånd, kanter, radier, skuggor och rich text.</p>
+
+      <h3 class="ds-subhead">Färger</h3>
+      <div class="ds-swatches">
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-background"></div><div class="ds-swatch__meta"><strong>Background</strong><code>bg-background</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-foreground"></div><div class="ds-swatch__meta"><strong>Foreground</strong><code>bg-foreground</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-primary"></div><div class="ds-swatch__meta"><strong>Primary</strong><code>bg-primary</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-secondary"></div><div class="ds-swatch__meta"><strong>Secondary</strong><code>bg-secondary</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-muted"></div><div class="ds-swatch__meta"><strong>Muted</strong><code>bg-muted</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-accent"></div><div class="ds-swatch__meta"><strong>Accent</strong><code>bg-accent</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-card"></div><div class="ds-swatch__meta"><strong>Card</strong><code>bg-card</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-destructive"></div><div class="ds-swatch__meta"><strong>Destructive</strong><code>bg-destructive</code></div></div>
+        <div class="ds-swatch"><div class="ds-swatch__chip bg-surface-strong"></div><div class="ds-swatch__meta"><strong>Strong surface</strong><code>bg-surface-strong</code></div></div>
+      </div>
+
+      <h3 class="ds-subhead">Typografi</h3>
+      <div class="ds-type-row"><code>text-5xl font-bold leading-tight tracking-tight</code><div class="text-5xl font-bold leading-tight tracking-tight">Strategisk digital tillväxt</div></div>
+      <div class="ds-type-row"><code>text-4xl font-bold leading-tight</code><div class="text-4xl font-bold leading-tight">Rubriknivå för viktiga sektioner</div></div>
+      <div class="ds-type-row"><code>text-3xl font-bold leading-snug</code><div class="text-3xl font-bold leading-snug">Tydlig mellanrubrik</div></div>
+      <div class="ds-type-row"><code>text-xl leading-relaxed</code><div class="text-xl leading-relaxed text-muted-foreground">Ingress med generöst radavstånd för professionell och lättläst kommunikation.</div></div>
+      <div class="ds-type-row"><code>text-sm font-semibold uppercase tracking-wide</code><div class="text-sm font-semibold uppercase tracking-wide text-primary">Överrubrik</div></div>
+
+      <h3 class="ds-subhead">Avstånd</h3>
+      <div class="ds-scale">
+        <div class="ds-scale-row"><code>space-1</code><div class="ds-scale-bar" style="width: .25rem"></div></div>
+        <div class="ds-scale-row"><code>space-2</code><div class="ds-scale-bar" style="width: .5rem"></div></div>
+        <div class="ds-scale-row"><code>space-4</code><div class="ds-scale-bar" style="width: 1rem"></div></div>
+        <div class="ds-scale-row"><code>space-6</code><div class="ds-scale-bar" style="width: 1.5rem"></div></div>
+        <div class="ds-scale-row"><code>space-8</code><div class="ds-scale-bar" style="width: 2rem"></div></div>
+        <div class="ds-scale-row"><code>space-12</code><div class="ds-scale-bar" style="width: 3rem"></div></div>
+        <div class="ds-scale-row"><code>space-16</code><div class="ds-scale-bar" style="width: 4rem"></div></div>
+        <div class="ds-scale-row"><code>space-20</code><div class="ds-scale-bar" style="width: 5rem"></div></div>
+      </div>
+
+      <h3 class="ds-subhead">Kanter, radius och skuggor</h3>
+      <div class="ds-radius-row">
+        <div class="ds-radius-box rounded-sm">rounded-sm</div>
+        <div class="ds-radius-box rounded-md">rounded-md</div>
+        <div class="ds-radius-box rounded-lg">rounded-lg</div>
+        <div class="ds-radius-box rounded-xl">rounded-xl</div>
+      </div>
+      <div class="ds-shadow-row">
+        <div class="ds-shadow-box shadow-sm rounded-lg">shadow-sm</div>
+        <div class="ds-shadow-box shadow-md rounded-lg">shadow-md</div>
+        <div class="ds-shadow-box shadow-lg rounded-lg">shadow-lg</div>
+      </div>
+
+      <h3 class="ds-subhead">Rich text</h3>
+      <article class="prose">
+        <h1>Så skapar vi mätbar utveckling</h1>
+        <p>En välbyggd webbplats förenar tydlig strategi, snabb teknik och innehåll som hjälper besökaren att fatta beslut.</p>
+        <h2>Principer</h2>
+        <p>Vi arbetar med en <a href="../about.html">strukturerad process</a> där varje steg kopplas till affärsnytta.</p>
+        <ul>
+          <li>Tydlig informationsarkitektur.</li>
+          <li>Återanvändbara komponenter och stabil design.</li>
+          <li>Tillgänglighet, prestanda och SEO från start.</li>
+        </ul>
+        <blockquote>“Bra digitala upplevelser känns enkla, men bygger på genomtänkta beslut.”</blockquote>
+        <p>Exempel på inline-kod: <code>aria-label</code> används för tydliga interaktiva element.</p>
+        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80" alt="Modernt kontor med arbetsgrupp" />
+      </article>
+    </section>
+
+    <section class="ds-block" id="components">
+      <h2>Component Library</h2>
+      <p class="ds-note">Varje grupp nedan är registrerad som Klar-komponenter. Länkvarianter listas först där komponenten kan vara en navigerande CTA.</p>
+
+      <h3 class="ds-subhead">Buttons</h3>
+      <div class="ds-specimens" data-klar-ds-elements="buttons" data-klar-ds-label="Buttons">
+        <a class="btn btn-primary" href="#" data-klar-ds-label="Primary link">Boka rådgivning</a>
+        <button class="btn btn-primary" type="button" data-klar-ds-label="Primary button">Skicka</button>
+        <a class="btn btn-secondary" href="#" data-klar-ds-label="Secondary link">Läs mer</a>
+        <button class="btn btn-secondary" type="button" data-klar-ds-label="Secondary button">Sekundär</button>
+        <a class="btn btn-outline" href="#" data-klar-ds-label="Outline link">Se tjänster</a>
+        <button class="btn btn-outline" type="button" data-klar-ds-label="Outline button">Outline</button>
+        <a class="btn btn-ghost" href="#" data-klar-ds-label="Ghost link">Kontakta oss</a>
+        <button class="btn btn-ghost" type="button" data-klar-ds-label="Ghost button">Ghost</button>
+        <a class="btn btn-primary btn-lg" href="#" data-klar-ds-label="Large primary link">Starta projekt</a>
+        <button class="btn btn-primary btn-lg" type="button" data-klar-ds-label="Large primary button">Stor knapp</button>
+      </div>
+
+      <h3 class="ds-subhead">Navigation and CTA links</h3>
+      <div class="ds-specimens" data-klar-ds-elements="navigation" data-klar-ds-label="Navigation">
+        <a class="nav-link" href="#" data-klar-ds-label="Navigation link">Tjänster</a>
+        <a class="nav-link" href="#" aria-current="page" data-klar-ds-label="Active navigation link">Om oss</a>
+        <a class="cta-link" href="#" data-klar-ds-label="CTA link">Läs kundcase →</a>
+        <a class="footer-link" href="#" data-klar-ds-label="Footer link">Integritetspolicy</a>
+      </div>
+
+      <h3 class="ds-subhead">Badges</h3>
+      <div class="ds-specimens" data-klar-ds-elements="badges" data-klar-ds-label="Badges">
+        <span class="badge" data-klar-ds-label="Neutral badge">Strategi</span>
+        <span class="badge badge-primary" data-klar-ds-label="Primary badge">Digital partner</span>
+        <span class="badge badge-accent" data-klar-ds-label="Accent badge">Tillväxt</span>
+      </div>
+
+      <h3 class="ds-subhead">Cards</h3>
+      <div class="ds-specimens ds-specimens--grid" data-klar-ds-elements="cards" data-klar-ds-label="Cards">
+        <article class="card service-card" data-klar-ds-label="Service card">
+          <div class="card__header">
+            <span class="icon-box">01</span>
+            <h3 class="card__title">Digital strategi</h3>
+          </div>
+          <div class="card__body">
+            <p class="card__text">Vi prioriterar mål, målgrupper och teknik så att varje investering får tydlig effekt.</p>
+          </div>
+        </article>
+        <article class="card benefit-card" data-klar-ds-label="Benefit card">
+          <div class="card__body">
+            <span class="badge badge-primary">Fördel</span>
+            <h3 class="card__title">Snabbare väg från idé till lansering</h3>
+            <p class="card__text">Återanvändbara mönster ger kortare ledtider och jämnare kvalitet.</p>
+          </div>
+          <div class="card__footer">
+            <span class="text-sm text-muted-foreground">Effekt</span>
+            <strong>+38%</strong>
+          </div>
+        </article>
+        <article class="testimonial-card card" data-klar-ds-label="Testimonial card">
+          <blockquote>“Teamet gjorde vår digitala närvaro tydligare, snabbare och enklare att förvalta.”</blockquote>
+          <div class="avatar-row">
+            <span class="avatar">AL</span>
+            <div>
+              <strong>Anna Lund</strong>
+              <p class="text-sm">VD, Studio Norr</p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="ds-subhead">Forms</h3>
+      <div class="ds-specimens ds-specimens--grid" data-klar-ds-elements="forms" data-klar-ds-label="Forms">
+        <form class="form card p-6" data-klar-ds-label="Contact form">
+          <div class="field">
+            <label class="label" for="ds-name">Namn</label>
+            <input class="input" id="ds-name" name="name" placeholder="Ditt namn" />
+          </div>
+          <div class="field">
+            <label class="label" for="ds-email">E-post</label>
+            <input class="input" id="ds-email" name="email" type="email" placeholder="namn@foretag.se" />
+          </div>
+          <div class="field">
+            <label class="label" for="ds-message">Meddelande</label>
+            <textarea class="textarea" id="ds-message" name="message" placeholder="Berätta kort om behovet"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Skicka förfrågan</button>
+        </form>
+        <div class="field" data-klar-ds-label="Input field">
+          <label class="label" for="ds-single">Fältetikett</label>
+          <input class="input" id="ds-single" placeholder="Exempeltext" />
+        </div>
+        <div class="field" data-klar-ds-label="Select field">
+          <label class="label" for="ds-select">Val</label>
+          <select class="select" id="ds-select">
+            <option>Digital strategi</option>
+            <option>Webbutveckling</option>
+            <option>Optimering</option>
+          </select>
+        </div>
+      </div>
+
+      <h3 class="ds-subhead">Container</h3>
+      <div class="ds-specimens ds-specimens--stack" data-klar-ds-elements="containers" data-klar-ds-label="Container">
+        <div class="container" data-klar-ds-label="Default"><div class="ds-placeholder">Standardbredd för de flesta sektioner.</div></div>
+        <div class="container-narrow" data-klar-ds-label="Narrow"><div class="ds-placeholder">Smal bredd för text och formulär.</div></div>
+        <div class="container-wide" data-klar-ds-label="Wide"><div class="ds-placeholder">Bred layout för stora grids och visuella sektioner.</div></div>
+      </div>
+
+      <h3 class="ds-subhead">Grid</h3>
+      <div class="ds-specimens ds-specimens--stack" data-klar-ds-elements="grids" data-klar-ds-label="Grid">
+        <div class="grid grid-cols-1 gap-4" data-klar-ds-label="1 column"><div class="ds-grid-cell">Strategi</div></div>
+        <div class="grid grid-cols-2 gap-4" data-klar-ds-label="2 columns"><div class="ds-grid-cell">Strategi</div><div class="ds-grid-cell">Design</div></div>
+        <div class="grid grid-cols-3 gap-4" data-klar-ds-label="3 columns"><div class="ds-grid-cell">Strategi</div><div class="ds-grid-cell">Design</div><div class="ds-grid-cell">Teknik</div></div>
+        <div class="grid grid-cols-4 gap-4" data-klar-ds-label="4 columns"><div class="ds-grid-cell">Plan</div><div class="ds-grid-cell">Bygg</div><div class="ds-grid-cell">Lansera</div><div class="ds-grid-cell">Optimera</div></div>
+      </div>
+
+      <h3 class="ds-subhead">Container and Grid</h3>
+      <div class="ds-specimens ds-specimens--stack" data-klar-ds-elements="containers-and-grids" data-klar-ds-label="Container and Grid">
+        <div class="container grid grid-cols-1 gap-4" data-klar-ds-label="Default · 1 col"><div class="ds-grid-cell">Analys</div></div>
+        <div class="container grid grid-cols-2 gap-4" data-klar-ds-label="Default · 2 cols"><div class="ds-grid-cell">Analys</div><div class="ds-grid-cell">Roadmap</div></div>
+        <div class="container grid grid-cols-3 gap-4" data-klar-ds-label="Default · 3 cols"><div class="ds-grid-cell">Analys</div><div class="ds-grid-cell">Design</div><div class="ds-grid-cell">Teknik</div></div>
+        <div class="container grid grid-cols-4 gap-4" data-klar-ds-label="Default · 4 cols"><div class="ds-grid-cell">Plan</div><div class="ds-grid-cell">Bygg</div><div class="ds-grid-cell">Test</div><div class="ds-grid-cell">Lansera</div></div>
+        <div class="container-narrow grid grid-cols-1 gap-4" data-klar-ds-label="Narrow · 1 col"><div class="ds-grid-cell">Fokuserat innehåll</div></div>
+        <div class="container-narrow grid grid-cols-2 gap-4" data-klar-ds-label="Narrow · 2 cols"><div class="ds-grid-cell">Behov</div><div class="ds-grid-cell">Lösning</div></div>
+        <div class="container-narrow grid grid-cols-3 gap-4" data-klar-ds-label="Narrow · 3 cols"><div class="ds-grid-cell">Ett</div><div class="ds-grid-cell">Två</div><div class="ds-grid-cell">Tre</div></div>
+        <div class="container-narrow grid grid-cols-4 gap-4" data-klar-ds-label="Narrow · 4 cols"><div class="ds-grid-cell">A</div><div class="ds-grid-cell">B</div><div class="ds-grid-cell">C</div><div class="ds-grid-cell">D</div></div>
+        <div class="container-wide grid grid-cols-1 gap-4" data-klar-ds-label="Wide · 1 col"><div class="ds-grid-cell">Bred presentation</div></div>
+        <div class="container-wide grid grid-cols-2 gap-4" data-klar-ds-label="Wide · 2 cols"><div class="ds-grid-cell">Strategi</div><div class="ds-grid-cell">Genomförande</div></div>
+        <div class="container-wide grid grid-cols-3 gap-4" data-klar-ds-label="Wide · 3 cols"><div class="ds-grid-cell">Strategi</div><div class="ds-grid-cell">Design</div><div class="ds-grid-cell">Teknik</div></div>
+        <div class="container-wide grid grid-cols-4 gap-4" data-klar-ds-label="Wide · 4 cols"><div class="ds-grid-cell">Insikt</div><div class="ds-grid-cell">Koncept</div><div class="ds-grid-cell">Kod</div><div class="ds-grid-cell">Mätning</div></div>
+      </div>
+    </section>
+
+    <section class="ds-block" id="sections">
+      <h2>Sections</h2>
+      <p class="ds-note">Färdiga, självständiga sidsektioner. Varje direkt barn i gruppen kan infogas av Klar.</p>
+
+      <div class="ds-specimens ds-specimens--stack ds-sections" data-klar-ds-elements="Sections" data-klar-ds-label="Sections">
+        <header class="site-header" data-klar-ds-label="Header">
+          <div class="container header-inner">
+            <a class="brand" href="../index.html">
+              <span class="brand-mark">ND</span>
+              <span>Nordisk Digital</span>
+            </a>
+            <nav class="nav-menu" aria-label="Huvudmeny">
+              <a class="nav-link" href="../index.html">Startsida</a>
+              <a class="nav-link" href="../about.html">Om oss</a>
+              <a class="nav-link" href="../contact.html">Kontakt</a>
+            </nav>
+            <div class="header-actions">
+              <a class="btn btn-primary" href="../contact.html">Boka möte</a>
+            </div>
+            <button class="mobile-toggle" type="button" aria-label="Öppna meny" aria-expanded="false">
+              <span class="mobile-toggle__bars"></span>
+            </button>
+          </div>
+        </header>
+
+        <section class="hero" data-klar-ds-label="Hero">
+          <div class="container hero__grid">
+            <div class="hero__content">
+              <span class="badge badge-primary">Digital partner för växande företag</span>
+              <h1>Vi bygger webbplatser som stärker varumärket och skapar fler affärer.</h1>
+              <p class="hero__lead">Nordisk Digital hjälper företag att gå från spretig digital närvaro till en snabb, tydlig och mätbar webbupplevelse.</p>
+              <div class="hero__actions">
+                <a class="btn btn-primary btn-lg" href="../contact.html">Boka kostnadsfri rådgivning</a>
+                <a class="btn btn-outline btn-lg" href="../about.html">Så arbetar vi</a>
+              </div>
+            </div>
+            <div class="hero__visual">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" alt="Team som planerar digital strategi" />
+              <div class="hero-panel">
+                <strong>Strategi, design och teknik i samma team</strong>
+                <p>En tydlig process från första analys till löpande optimering.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" data-klar-ds-label="Company presentation">
+          <div class="container split">
+            <div class="section-heading">
+              <span class="section-kicker">Om företaget</span>
+              <h2>En trygg partner när digitala initiativ behöver bli affärsresultat.</h2>
+            </div>
+            <div class="stack">
+              <p class="lead">Vi kombinerar rådgivning, UX, webbutveckling och analys för att skapa lösningar som är enkla att använda, lätta att förvalta och byggda för tillväxt.</p>
+              <p>Vårt arbetssätt passar företag som vill ha hög kvalitet utan onödig komplexitet. Vi prioriterar tydlighet, prestanda och långsiktig hållbarhet.</p>
+              <a class="cta-link" href="../about.html">Lär känna oss →</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-muted" data-klar-ds-label="Services grid">
+          <div class="container stack">
+            <div class="section-heading section-heading--center">
+              <span class="section-kicker">Tjänster</span>
+              <h2>Helheten som krävs för en modern webbplats.</h2>
+              <p class="lead">Från strategi till optimering – samma system, samma målbild och samma höga kvalitet.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <article class="card service-card">
+                <div class="card__header"><span class="icon-box">S</span><h3 class="card__title">Strategi</h3></div>
+                <div class="card__body"><p class="card__text">Mål, målgrupper, innehållsstruktur och prioriterad roadmap.</p></div>
+              </article>
+              <article class="card service-card">
+                <div class="card__header"><span class="icon-box">D</span><h3 class="card__title">Design</h3></div>
+                <div class="card__body"><p class="card__text">Tillgängliga gränssnitt med tydlig hierarki och stark varumärkeskänsla.</p></div>
+              </article>
+              <article class="card service-card">
+                <div class="card__header"><span class="icon-box">T</span><h3 class="card__title">Teknik</h3></div>
+                <div class="card__body"><p class="card__text">Snabb, responsiv och robust kod utan onödiga beroenden.</p></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" data-klar-ds-label="Benefits">
+          <div class="container stack">
+            <div class="section-heading">
+              <span class="section-kicker">Kundnytta</span>
+              <h2>Varför företag väljer oss.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <article class="card benefit-card p-6">
+                <span class="badge badge-accent">Effekt</span>
+                <h3 class="card__title mt-4">Tydligare erbjudande</h3>
+                <p class="mt-4">Besökare förstår snabbare vad ni gör, varför det spelar roll och nästa steg.</p>
+              </article>
+              <article class="card benefit-card p-6">
+                <span class="badge badge-accent">Hastighet</span>
+                <h3 class="card__title mt-4">Bättre prestanda</h3>
+                <p class="mt-4">Lätt kod, smart struktur och optimerade flöden ger snabbare upplevelser.</p>
+              </article>
+              <article class="card benefit-card p-6">
+                <span class="badge badge-accent">Kontroll</span>
+                <h3 class="card__title mt-4">Enklare förvaltning</h3>
+                <p class="mt-4">Återanvändbara komponenter gör innehåll och kampanjer lättare att vidareutveckla.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section-muted" data-klar-ds-label="Testimonials">
+          <div class="container stack">
+            <div class="section-heading section-heading--center">
+              <span class="section-kicker">Kundröster</span>
+              <h2>Resultat som märks i vardagen.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <article class="testimonial-card card">
+                <blockquote>“Vi fick en webbplats som både säljer bättre och är enklare att arbeta med.”</blockquote>
+                <div class="avatar-row"><span class="avatar">ML</span><div><strong>Maria Lind</strong><p class="text-sm">Marknadschef</p></div></div>
+              </article>
+              <article class="testimonial-card card">
+                <blockquote>“Processen var tydlig, effektiv och trygg från första workshop till lansering.”</blockquote>
+                <div class="avatar-row"><span class="avatar">EK</span><div><strong>Erik Karlsson</strong><p class="text-sm">Grundare</p></div></div>
+              </article>
+              <article class="testimonial-card card">
+                <blockquote>“Äntligen har vi en digital plattform som speglar kvaliteten i vårt erbjudande.”</blockquote>
+                <div class="avatar-row"><span class="avatar">SN</span><div><strong>Sara Nyström</strong><p class="text-sm">VD</p></div></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" data-klar-ds-label="Process">
+          <div class="container split">
+            <div class="section-heading">
+              <span class="section-kicker">Process</span>
+              <h2>En strukturerad väg från insikt till förbättring.</h2>
+              <p class="lead">Vi håller projektet fokuserat, transparent och kopplat till tydliga mål.</p>
+            </div>
+            <div class="process-list">
+              <article class="process-step"><div><h3>Analys</h3><p>Vi kartlägger mål, målgrupp, innehåll och tekniska förutsättningar.</p></div></article>
+              <article class="process-step"><div><h3>Koncept</h3><p>Vi skapar struktur, designriktning och prioriterad plan för genomförandet.</p></div></article>
+              <article class="process-step"><div><h3>Lansering</h3><p>Vi bygger, testar, publicerar och optimerar utifrån data.</p></div></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" data-klar-ds-label="Team">
+          <div class="container stack">
+            <div class="section-heading section-heading--center">
+              <span class="section-kicker">Team</span>
+              <h2>Specialister som arbetar nära din organisation.</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <article class="card team-card">
+                <img class="aspect-video object-cover" src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=900&q=80" alt="Porträtt av strateg" />
+                <div class="card__body"><h3 class="card__title">Elin Fors</h3><p>Strategi och projektledning</p></div>
+              </article>
+              <article class="card team-card">
+                <img class="aspect-video object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80" alt="Porträtt av designer" />
+                <div class="card__body"><h3 class="card__title">Johan Berg</h3><p>UX och visuell design</p></div>
+              </article>
+              <article class="card team-card">
+                <img class="aspect-video object-cover" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=900&q=80" alt="Porträtt av utvecklare" />
+                <div class="card__body"><h3 class="card__title">Nora Holm</h3><p>Frontend och optimering</p></div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" data-klar-ds-label="Text content">
+          <article class="container-narrow prose">
+            <h1>Digital kvalitet börjar med tydliga val</h1>
+            <p>En modern företagswebbplats ska inte bara se professionell ut. Den ska vara snabb, tillgänglig, enkel att förstå och byggd för att utvecklas över tid.</p>
+            <h2>Vad vi prioriterar</h2>
+            <p>Vi utgår från affärsmål och användarnas behov, och bygger sedan en lösning där innehåll, design och teknik samspelar.</p>
+            <ul>
+              <li>Semantisk HTML för SEO och tillgänglighet.</li>
+              <li>Responsiva layouter som fungerar på alla skärmar.</li>
+              <li>Komponenter som kan återanvändas utan att tappa kvalitet.</li>
+            </ul>
+            <blockquote>En bra webbplats ska göra nästa steg självklart för besökaren.</blockquote>
+            <p>Vill du veta mer om arbetssättet? <a href="../about.html">Läs om vår process</a>.</p>
+          </article>
+        </section>
+
+        <section class="section section-muted" data-klar-ds-label="Contact">
+          <div class="container split">
+            <div class="contact-panel">
+              <span class="section-kicker">Kontakt</span>
+              <h2>Berätta vad ni vill förbättra.</h2>
+              <p>Vi återkommer normalt inom en arbetsdag med förslag på nästa steg.</p>
+              <ul class="contact-list">
+                <li class="contact-item"><span class="icon-box">E</span><div><strong>E-post</strong><p>hej@nordiskdigital.se</p></div></li>
+                <li class="contact-item"><span class="icon-box">T</span><div><strong>Telefon</strong><p>08-123 45 67</p></div></li>
+                <li class="contact-item"><span class="icon-box">P</span><div><strong>Plats</strong><p>Kungsgatan 12, Stockholm</p></div></li>
+              </ul>
+            </div>
+            <form class="form card p-8">
+              <div class="form-row">
+                <div class="field"><label class="label" for="section-name">Namn</label><input class="input" id="section-name" name="name" required /></div>
+                <div class="field"><label class="label" for="section-email">E-post</label><input class="input" id="section-email" name="email" type="email" required /></div>
+              </div>
+              <div class="field"><label class="label" for="section-message">Meddelande</label><textarea class="textarea" id="section-message" name="message" required></textarea></div>
+              <button class="btn btn-primary" type="submit">Skicka meddelande</button>
+            </form>
+          </div>
+        </section>
+
+        <section class="section" data-klar-ds-label="Map placeholder">
+          <div class="container">
+            <div class="map-placeholder">
+              <div>
+                <strong class="text-foreground">Karta över Stockholm</strong>
+                <p>Här kan en integrerad karta läggas in vid publicering.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" data-klar-ds-label="Newsletter CTA">
+          <div class="container">
+            <div class="cta">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="stack">
+                  <span class="badge">Redo att börja?</span>
+                  <h2>Ta nästa steg mot en tydligare digital närvaro.</h2>
+                  <p>Vi hjälper dig att prioritera rätt, bygga snabbt och skapa en webbplats som fortsätter leverera.</p>
+                </div>
+                <div class="cluster justify-start md:items-center">
+                  <a class="btn btn-primary btn-lg" href="../contact.html">Boka rådgivning</a>
+                  <a class="btn btn-outline btn-lg" href="../about.html">Läs mer om oss</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer" data-klar-ds-label="Footer">
+          <div class="container">
+            <div class="footer-grid">
+              <div class="footer-col">
+                <a class="brand" href="../index.html"><span class="brand-mark">ND</span><span>Nordisk Digital</span></a>
+                <p>Strategi, design och webbutveckling för företag som vill växa digitalt.</p>
+              </div>
+              <div class="footer-col"><strong class="footer-title">Sidor</strong><a class="footer-link" href="../index.html">Startsida</a><a class="footer-link" href="../about.html">Om oss</a><a class="footer-link" href="../contact.html">Kontakt</a></div>
+              <div class="footer-col"><strong class="footer-title">Tjänster</strong><a class="footer-link" href="../about.html">Strategi</a><a class="footer-link" href="../about.html">Design</a><a class="footer-link" href="../about.html">Utveckling</a></div>
+              <div class="footer-col"><strong class="footer-title">Kontakt</strong><a class="footer-link" href="mailto:hej@nordiskdigital.se">hej@nordiskdigital.se</a><a class="footer-link" href="tel:+4681234567">08-123 45 67</a></div>
+            </div>
+            <div class="footer-bottom">
+              <span>© 2026 Nordisk Digital AB. Alla rättigheter förbehållna.</span>
+              <span>Byggd med tillgänglighet och prestanda i fokus.</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <span>Designsystem för Nordisk Digital</span>
+      <a class="footer-link" href="#top">Till toppen</a>
+    </div>
+  </footer>
+
+  <!-- Foundation utility manifest for the Klar editor.
+       Every value references a class that exists in style.css. -->
+  <script type="application/json" data-klar-ds>
+    {
+      "classes": {
+        "Background color": [
+          { "label": "Page", "value": "bg-background" },
+          { "label": "Foreground", "value": "bg-foreground" },
+          { "label": "Primary", "value": "bg-primary" },
+          { "label": "Secondary", "value": "bg-secondary" },
+          { "label": "Muted", "value": "bg-muted" },
+          { "label": "Accent", "value": "bg-accent" },
+          { "label": "Card", "value": "bg-card" },
+          { "label": "Destructive", "value": "bg-destructive" },
+          { "label": "Strong surface", "value": "bg-surface-strong" },
+          { "label": "Transparent", "value": "bg-transparent" }
+        ],
+        "Text color": [
+          { "label": "Foreground", "value": "text-foreground" },
+          { "label": "Background", "value": "text-background" },
+          { "label": "Primary", "value": "text-primary" },
+          { "label": "On primary", "value": "text-primary-foreground" },
+          { "label": "On secondary", "value": "text-secondary-foreground" },
+          { "label": "Muted", "value": "text-muted-foreground" },
+          { "label": "On accent", "value": "text-accent-foreground" },
+          { "label": "Destructive", "value": "text-destructive" },
+          { "label": "On strong surface", "value": "text-surface-strong-foreground" },
+          { "label": "White", "value": "text-white" },
+          { "label": "Black", "value": "text-black" }
+        ],
+        "Border": [
+          { "label": "None", "value": "border-0" },
+          { "label": "All small", "value": "border" },
+          { "label": "All medium", "value": "border-2" },
+          { "label": "Top small", "value": "border-t" },
+          { "label": "Bottom small", "value": "border-b" },
+          { "label": "Left medium", "value": "border-l-2" }
+        ],
+        "Border color": [
+          { "label": "Muted", "value": "border-muted" },
+          { "label": "Foreground", "value": "border-foreground" },
+          { "label": "Primary", "value": "border-primary" },
+          { "label": "Destructive", "value": "border-destructive" },
+          { "label": "Transparent", "value": "border-transparent" }
+        ],
+        "Font size": [
+          { "label": "XS", "value": "text-xs" },
+          { "label": "Small", "value": "text-sm" },
+          { "label": "Base", "value": "text-base" },
+          { "label": "Large", "value": "text-lg" },
+          { "label": "XL", "value": "text-xl" },
+          { "label": "2XL", "value": "text-2xl" },
+          { "label": "3XL", "value": "text-3xl" },
+          { "label": "4XL", "value": "text-4xl" },
+          { "label": "5XL", "value": "text-5xl" },
+          { "label": "4XL", "value": "md:text-4xl" },
+          { "label": "5XL", "value": "lg:text-5xl" }
+        ],
+        "Font weight": [
+          { "label": "Normal", "value": "font-normal" },
+          { "label": "Medium", "value": "font-medium" },
+          { "label": "Semibold", "value": "font-semibold" },
+          { "label": "Bold", "value": "font-bold" }
+        ],
+        "Line height": [
+          { "label": "Tight", "value": "leading-tight" },
+          { "label": "Snug", "value": "leading-snug" },
+          { "label": "Normal", "value": "leading-normal" },
+          { "label": "Relaxed", "value": "leading-relaxed" }
+        ],
+        "Letter spacing": [
+          { "label": "Tight", "value": "tracking-tight" },
+          { "label": "Normal", "value": "tracking-normal" },
+          { "label": "Wide", "value": "tracking-wide" }
+        ],
+        "Text": [
+          { "label": "Align left", "value": "text-left" },
+          { "label": "Align center", "value": "text-center" },
+          { "label": "Align right", "value": "text-right" },
+          { "label": "Uppercase", "value": "uppercase" },
+          { "label": "Italic", "value": "italic" },
+          { "label": "Underline", "value": "underline" },
+          { "label": "Truncate", "value": "truncate" },
+          { "label": "Sans font", "value": "font-sans" },
+          { "label": "Align left", "value": "md:text-left" },
+          { "label": "Align left", "value": "lg:text-left" }
+        ],
+        "Typography": [
+          { "label": "Display", "value": "text-5xl font-bold tracking-tight leading-tight" },
+          { "label": "Heading 1", "value": "text-4xl font-bold tracking-tight leading-tight" },
+          { "label": "Heading 2", "value": "text-3xl font-bold tracking-tight leading-snug" },
+          { "label": "Heading 3", "value": "text-2xl font-semibold leading-snug" },
+          { "label": "Heading 4", "value": "text-xl font-semibold leading-snug" },
+          { "label": "Lead", "value": "text-xl font-normal leading-relaxed" },
+          { "label": "Body", "value": "text-base font-normal leading-normal" },
+          { "label": "Small", "value": "text-sm font-normal leading-normal" },
+          { "label": "Meta", "value": "text-xs font-semibold uppercase tracking-wide" }
+        ],
+        "Display": [
+          { "label": "Block", "value": "block" },
+          { "label": "Inline block", "value": "inline-block" },
+          { "label": "Inline", "value": "inline" },
+          { "label": "Flex", "value": "flex" },
+          { "label": "Inline flex", "value": "inline-flex" },
+          { "label": "Grid", "value": "grid" },
+          { "label": "Hidden", "value": "hidden" },
+          { "label": "Block", "value": "md:block" },
+          { "label": "Flex", "value": "md:flex" },
+          { "label": "Grid", "value": "md:grid" },
+          { "label": "Hidden", "value": "md:hidden" },
+          { "label": "Block", "value": "lg:block" },
+          { "label": "Flex", "value": "lg:flex" },
+          { "label": "Grid", "value": "lg:grid" },
+          { "label": "Hidden", "value": "lg:hidden" }
+        ],
+        "Flexbox": [
+          { "label": "Row", "value": "flex-row" },
+          { "label": "Column", "value": "flex-col" },
+          { "label": "Wrap", "value": "flex-wrap" },
+          { "label": "Flex 1", "value": "flex-1" },
+          { "label": "No shrink", "value": "flex-shrink-0" },
+          { "label": "Items start", "value": "items-start" },
+          { "label": "Items center", "value": "items-center" },
+          { "label": "Items end", "value": "items-end" },
+          { "label": "Justify start", "value": "justify-start" },
+          { "label": "Justify center", "value": "justify-center" },
+          { "label": "Justify between", "value": "justify-between" },
+          { "label": "Justify end", "value": "justify-end" },
+          { "label": "Row", "value": "md:flex-row" },
+          { "label": "Items center", "value": "md:items-center" }
+        ],
+        "Grid columns": [
+          { "label": "1 column", "value": "grid-cols-1" },
+          { "label": "2 columns", "value": "grid-cols-2" },
+          { "label": "3 columns", "value": "grid-cols-3" },
+          { "label": "4 columns", "value": "grid-cols-4" },
+          { "label": "Span 1", "value": "col-span-1" },
+          { "label": "Span 2", "value": "col-span-2" },
+          { "label": "Span full", "value": "col-span-full" },
+          { "label": "2 columns", "value": "md:grid-cols-2" },
+          { "label": "3 columns", "value": "md:grid-cols-3" },
+          { "label": "Span 2", "value": "md:col-span-2" },
+          { "label": "2 columns", "value": "lg:grid-cols-2" },
+          { "label": "3 columns", "value": "lg:grid-cols-3" },
+          { "label": "4 columns", "value": "lg:grid-cols-4" },
+          { "label": "Span 2", "value": "lg:col-span-2" }
+        ],
+        "Gap": [
+          { "label": "3XS", "value": "gap-1" },
+          { "label": "2XS", "value": "gap-2" },
+          { "label": "XS", "value": "gap-3" },
+          { "label": "Small", "value": "gap-4" },
+          { "label": "Base", "value": "gap-5" },
+          { "label": "Medium", "value": "gap-6" },
+          { "label": "Large", "value": "gap-8" },
+          { "label": "XL", "value": "gap-10" },
+          { "label": "2XL", "value": "gap-12" },
+          { "label": "2XL", "value": "lg:gap-12" }
+        ],
+        "Margin": [
+          { "label": "Center horizontal", "value": "mx-auto" },
+          { "label": "All none", "value": "m-0" },
+          { "label": "Top none", "value": "mt-0" },
+          { "label": "Top small", "value": "mt-4" },
+          { "label": "Top medium", "value": "mt-6" },
+          { "label": "Top large", "value": "mt-8" },
+          { "label": "Top XL", "value": "mt-10" },
+          { "label": "Top 2XL", "value": "mt-12" },
+          { "label": "Bottom none", "value": "mb-0" },
+          { "label": "Bottom 2XS", "value": "mb-2" },
+          { "label": "Bottom small", "value": "mb-4" },
+          { "label": "Bottom medium", "value": "mb-6" },
+          { "label": "Bottom large", "value": "mb-8" },
+          { "label": "Bottom 2XL", "value": "mb-12" },
+          { "label": "Vertical none", "value": "my-0" },
+          { "label": "Vertical large", "value": "my-8" },
+          { "label": "Vertical 2XL", "value": "my-12" },
+          { "label": "Horizontal none", "value": "mx-0" }
+        ],
+        "Padding": [
+          { "label": "All none", "value": "p-0" },
+          { "label": "All small", "value": "p-4" },
+          { "label": "All base", "value": "p-5" },
+          { "label": "All medium", "value": "p-6" },
+          { "label": "All large", "value": "p-8" },
+          { "label": "All 2XL", "value": "p-12" },
+          { "label": "Horizontal none", "value": "px-0" },
+          { "label": "Horizontal small", "value": "px-4" },
+          { "label": "Horizontal base", "value": "px-5" },
+          { "label": "Horizontal medium", "value": "px-6" },
+          { "label": "Horizontal large", "value": "px-8" },
+          { "label": "Vertical none", "value": "py-0" },
+          { "label": "Vertical XS", "value": "py-3" },
+          { "label": "Vertical small", "value": "py-4" },
+          { "label": "Vertical large", "value": "py-8" },
+          { "label": "Vertical 2XL", "value": "py-12" },
+          { "label": "Vertical 3XL", "value": "py-16" },
+          { "label": "Vertical 4XL", "value": "py-20" },
+          { "label": "Top none", "value": "pt-0" },
+          { "label": "Top large", "value": "pt-8" },
+          { "label": "Top 2XL", "value": "pt-12" },
+          { "label": "Bottom none", "value": "pb-0" },
+          { "label": "Bottom large", "value": "pb-8" },
+          { "label": "Bottom 2XL", "value": "pb-12" },
+          { "label": "Vertical 3XL", "value": "md:py-16" },
+          { "label": "Vertical 4XL", "value": "lg:py-20" }
+        ],
+        "Sizing": [
+          { "label": "Width full", "value": "w-full" },
+          { "label": "Width 10", "value": "w-10" },
+          { "label": "Width 12", "value": "w-12" },
+          { "label": "Height full", "value": "h-full" },
+          { "label": "Height 10", "value": "h-10" },
+          { "label": "Height 12", "value": "h-12" },
+          { "label": "Min height screen", "value": "min-h-screen" },
+          { "label": "Min height hero", "value": "min-h-hero" },
+          { "label": "Max width XL", "value": "max-w-xl" },
+          { "label": "Max width 2XL", "value": "max-w-2xl" },
+          { "label": "Max width 3XL", "value": "max-w-3xl" },
+          { "label": "Max width 4XL", "value": "max-w-4xl" },
+          { "label": "Max width 6XL", "value": "max-w-6xl" }
+        ],
+        "Radius": [
+          { "label": "None", "value": "rounded-none" },
+          { "label": "Small", "value": "rounded-sm" },
+          { "label": "Medium", "value": "rounded-md" },
+          { "label": "Large", "value": "rounded-lg" },
+          { "label": "XL", "value": "rounded-xl" },
+          { "label": "Full", "value": "rounded-full" }
+        ],
+        "Shadows": [
+          { "label": "None", "value": "shadow-none" },
+          { "label": "Small", "value": "shadow-sm" },
+          { "label": "Medium", "value": "shadow-md" },
+          { "label": "Large", "value": "shadow-lg" }
+        ],
+        "Position": [
+          { "label": "Relative", "value": "relative" },
+          { "label": "Absolute", "value": "absolute" },
+          { "label": "Sticky", "value": "sticky" },
+          { "label": "Fixed", "value": "fixed" },
+          { "label": "Inset 0", "value": "inset-0" },
+          { "label": "Top 0", "value": "top-0" },
+          { "label": "Top header", "value": "top-header" },
+          { "label": "Right 0", "value": "right-0" },
+          { "label": "Bottom 0", "value": "bottom-0" },
+          { "label": "Left 0", "value": "left-0" }
+        ],
+        "Object fit & aspect": [
+          { "label": "Object cover", "value": "object-cover" },
+          { "label": "Aspect square", "value": "aspect-square" },
+          { "label": "Aspect video", "value": "aspect-video" }
+        ],
+        "Effects": [
+          { "label": "Overflow hidden", "value": "overflow-hidden" },
+          { "label": "Transition", "value": "transition" },
+          { "label": "Cursor pointer", "value": "cursor-pointer" },
+          { "label": "Screen-reader only", "value": "sr-only" }
+        ],
+        "Rich text": [
+          { "label": "Prose", "value": "prose" }
+        ],
+        "Container": [
+          { "label": "Default", "value": "container" },
+          { "label": "Narrow", "value": "container-narrow" },
+          { "label": "Wide", "value": "container-wide" }
+        ],
+        "Grid": [
+          { "label": "1 column", "value": "grid grid-cols-1" },
+          { "label": "2 columns", "value": "grid grid-cols-2" },
+          { "label": "3 columns", "value": "grid grid-cols-3" },
+          { "label": "4 columns", "value": "grid grid-cols-4" }
+        ],
+        "Container and Grid": [
+          { "label": "Default · 1 col", "value": "container grid grid-cols-1" },
+          { "label": "Default · 2 cols", "value": "container grid grid-cols-2" },
+          { "label": "Default · 3 cols", "value": "container grid grid-cols-3" },
+          { "label": "Default · 4 cols", "value": "container grid grid-cols-4" },
+          { "label": "Narrow · 1 col", "value": "container-narrow grid grid-cols-1" },
+          { "label": "Narrow · 2 cols", "value": "container-narrow grid grid-cols-2" },
+          { "label": "Narrow · 3 cols", "value": "container-narrow grid grid-cols-3" },
+          { "label": "Narrow · 4 cols", "value": "container-narrow grid grid-cols-4" },
+          { "label": "Wide · 1 col", "value": "container-wide grid grid-cols-1" },
+          { "label": "Wide · 2 cols", "value": "container-wide grid grid-cols-2" },
+          { "label": "Wide · 3 cols", "value": "container-wide grid grid-cols-3" },
+          { "label": "Wide · 4 cols", "value": "container-wide grid grid-cols-4" }
+        ],
+        "Layout primitives": [
+          { "label": "Section", "value": "section" },
+          { "label": "Muted section", "value": "section-muted" },
+          { "label": "Strong section", "value": "section-strong" },
+          { "label": "Stack", "value": "stack" },
+          { "label": "Cluster", "value": "cluster" },
+          { "label": "Split", "value": "split" },
+          { "label": "Auto grid", "value": "grid-auto" }
+        ],
+        "Navigation": [
+          { "label": "Nav link", "value": "nav-link" },
+          { "label": "CTA link", "value": "cta-link" },
+          { "label": "Footer link", "value": "footer-link" }
+        ]
+      }
+    }
+  </script>
+
+  <script>
+    const dsThemeButtons = document.querySelectorAll('[aria-label="Toggle theme"]');
+    dsThemeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        document.documentElement.classList.toggle('dark');
+      });
+    });
+
+    const dsMobileToggle = document.querySelector('.mobile-toggle');
+    const dsNavMenu = document.querySelector('.nav-menu');
+    if (dsMobileToggle && dsNavMenu) {
+      dsMobileToggle.addEventListener('click', () => {
+        const isOpen = dsMobileToggle.getAttribute('aria-expanded') === 'true';
+        dsMobileToggle.setAttribute('aria-expanded', String(!isOpen));
+        dsNavMenu.classList.toggle('is-open', !isOpen);
+      });
+    }
+  </script>
+</body>
+</html>
